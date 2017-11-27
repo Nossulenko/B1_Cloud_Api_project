@@ -14,10 +14,13 @@ import { AuthService } from '../providers/auth.service';
 import { DataService } from '../providers/data.service';
 import { AngularFireDatabaseModule } from "angularfire2/database";
 import {NotesService} from "../services/notes.service";
+import { NavParams } from 'ionic-angular/navigation/nav-params';
+import { DetailPage } from '../pages/detail/detail';
 
 @NgModule({
   declarations: [
     MyApp,
+    DetailPage
     
     
     
@@ -32,6 +35,8 @@ import {NotesService} from "../services/notes.service";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    DetailPage
+    
   ],
   providers: [
     StatusBar,
@@ -42,7 +47,8 @@ import {NotesService} from "../services/notes.service";
     AuthService,
     DataService,
     NotesService,
-    FormsModule
+    FormsModule,
+    
   ]
 })
 export class AppModule {}

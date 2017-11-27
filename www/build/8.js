@@ -1,14 +1,14 @@
 webpackJsonp([8],{
 
-/***/ 443:
+/***/ 447:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MorePageModule", function() { return MorePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__more__ = __webpack_require__(507);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs__ = __webpack_require__(513);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MorePageModule = (function () {
-    function MorePageModule() {
+var TabsPageModule = (function () {
+    function TabsPageModule() {
     }
-    return MorePageModule;
+    return TabsPageModule;
 }());
-MorePageModule = __decorate([
+TabsPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__more__["a" /* MorePage */],
+            __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__more__["a" /* MorePage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]),
         ],
     })
-], MorePageModule);
+], TabsPageModule);
 
-//# sourceMappingURL=more.module.js.map
+//# sourceMappingURL=tabs.module.js.map
 
 /***/ }),
 
-/***/ 507:
+/***/ 513:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MorePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(57);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -55,31 +54,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
 /**
- * Generated class for the MorePage page.
+ * Generated class for the TabsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var MorePage = (function () {
-    function MorePage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
+var TabsPage = (function () {
+    function TabsPage() {
+        this.tab1Root = 'Home2Page';
+        this.tab2Root = 'ProfilePage';
+        this.tab3Root = 'HomePage';
+        this.tab4Root = 'AgendaPage';
+        this.tab5Root = "ShowQuotesPage";
     }
-    MorePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad MorePage');
-    };
-    return MorePage;
+    return TabsPage;
 }());
-MorePage = __decorate([
+TabsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-more',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/pages/more/more.html"*/'<!--\n  Generated template for the MorePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="secondary">\n    <ion-title>Online Academy</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/pages/more/more.html"*/,
+        selector: 'page-tabs',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/pages/tabs/tabs.html"*/'<ion-tabs>\n    <ion-tab [root]="tab3Root" tabTitle="Home" tabIcon="home"></ion-tab>\n    <ion-tab [root]="tab1Root" tabTitle="Notes" tabIcon="book"></ion-tab>\n    <ion-tab [root]="tab2Root" tabTitle="Profile" tabIcon="contact"></ion-tab>\n    <ion-tab [root]="tab4Root" tabTitle="Agenda" tabIcon="calendar"></ion-tab>\n    <ion-tab [root]="tab5Root" tabTitle="Quotes" tabIcon="quote"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/pages/tabs/tabs.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
-], MorePage);
+    __metadata("design:paramtypes", [])
+], TabsPage);
 
-//# sourceMappingURL=more.js.map
+//# sourceMappingURL=tabs.js.map
 
 /***/ })
 

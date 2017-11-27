@@ -1,6 +1,6 @@
-webpackJsonp([14],{
+webpackJsonp([15],{
 
-/***/ 147:
+/***/ 146:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,73 +13,73 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 147;
+webpackEmptyAsyncContext.id = 146;
 
 /***/ }),
 
-/***/ 190:
+/***/ 189:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/agenda/agenda.module": [
-		437,
-		28
+		435,
+		14
 	],
 	"../pages/detail/detail.module": [
-		438,
-		30
+		436,
+		13
 	],
 	"../pages/explore/explore.module": [
-		439,
-		27
+		437,
+		12
 	],
 	"../pages/home/home.module": [
-		440,
-		26
+		438,
+		11
 	],
 	"../pages/home2/home2.module": [
-		515,
-		29
+		439,
+		5
 	],
 	"../pages/immersion/immersion.module": [
-		441,
-		25
+		440,
+		10
 	],
 	"../pages/login/login.module": [
-		442,
-		20
+		441,
+		4
 	],
 	"../pages/more/more.module": [
-		443,
-		24
+		442,
+		9
 	],
 	"../pages/profile/profile.module": [
-		444,
-		19
+		443,
+		3
 	],
 	"../pages/quote/quote.module": [
-		445,
-		17
+		444,
+		1
 	],
 	"../pages/register/register.module": [
-		446,
-		18
+		445,
+		2
 	],
 	"../pages/show-quotes/show-quotes.module": [
-		447,
-		16
+		446,
+		0
 	],
 	"../pages/tabs/tabs.module": [
-		448,
-		23
+		447,
+		8
 	],
 	"../pages/training-courses/training-courses.module": [
-		450,
-		22
+		448,
+		7
 	],
 	"../pages/welcome/welcome.module": [
 		449,
-		21
+		6
 	]
 };
 function webpackAsyncContext(req) {
@@ -93,66 +93,12 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 190;
+webpackAsyncContext.id = 189;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 191:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotesService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var NotesService = (function () {
-    function NotesService() {
-        this.notes = [
-            { id: 1, title: 'Titel 1', description: 'Beschrijving 1' },
-            { id: 2, title: 'Titel 2', description: 'Beschrijving 2' },
-            { id: 3, title: 'Titel 3', description: 'Beschrijving 3' }
-        ];
-    }
-    NotesService.prototype.getNotes = function () {
-        return this.notes;
-    };
-    NotesService.prototype.getNote = function (id) {
-        return this.notes.filter(function (e, i) { return e.id == id; })[0] || { id: null, title: null, description: null };
-    };
-    NotesService.prototype.createNote = function (note) {
-        this.notes.push(note);
-    };
-    NotesService.prototype.editNote = function (note) {
-        for (var i = 0; i < this.notes.length; i++) {
-            if (this.notes[i].id == note.id) {
-                this.notes[i] = note;
-            }
-        }
-    };
-    NotesService.prototype.deleteNote = function (note) {
-        for (var i = 0; i < this.notes.length; i++) {
-            if (this.notes[i].id == note.id) {
-                this.notes.splice(i, 1);
-            }
-        }
-    };
-    return NotesService;
-}());
-NotesService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])()
-], NotesService);
-
-//# sourceMappingURL=notes.service.js.map
-
-/***/ }),
-
-/***/ 281:
+/***/ 279:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -268,7 +214,61 @@ AuthService = __decorate([
 
 /***/ }),
 
-/***/ 282:
+/***/ 280:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotesService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var NotesService = (function () {
+    function NotesService() {
+        this.notes = [
+            { id: 1, title: 'Titel 1', description: 'Beschrijving 1' },
+            { id: 2, title: 'Titel 2', description: 'Beschrijving 2' },
+            { id: 3, title: 'Titel 3', description: 'Beschrijving 3' }
+        ];
+    }
+    NotesService.prototype.getNotes = function () {
+        return this.notes;
+    };
+    NotesService.prototype.getNote = function (id) {
+        return this.notes.filter(function (e, i) { return e.id == id; })[0] || { id: null, title: null, description: null };
+    };
+    NotesService.prototype.createNote = function (note) {
+        this.notes.push(note);
+    };
+    NotesService.prototype.editNote = function (note) {
+        for (var i = 0; i < this.notes.length; i++) {
+            if (this.notes[i].id == note.id) {
+                this.notes[i] = note;
+            }
+        }
+    };
+    NotesService.prototype.deleteNote = function (note) {
+        for (var i = 0; i < this.notes.length; i++) {
+            if (this.notes[i].id == note.id) {
+                this.notes.splice(i, 1);
+            }
+        }
+    };
+    return NotesService;
+}());
+NotesService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])()
+], NotesService);
+
+//# sourceMappingURL=notes.service.js.map
+
+/***/ }),
+
+/***/ 281:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -352,13 +352,13 @@ DataService = __decorate([
 
 /***/ }),
 
-/***/ 286:
+/***/ 285:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(301);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -366,33 +366,35 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 302:
+/***/ 301:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(279);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_auth__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(434);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(433);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_firebase_config__ = __webpack_require__(435);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_video_player__ = __webpack_require__(285);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_in_app_browser__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_firebase_config__ = __webpack_require__(434);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_video_player__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_in_app_browser__ = __webpack_require__(283);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_forms__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_auth_service__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_data_service__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_auth_service__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_data_service__ = __webpack_require__(281);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_angularfire2_database__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_notes_service__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_notes_service__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_detail_detail__ = __webpack_require__(476);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -418,6 +420,7 @@ AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_16__pages_detail_detail__["a" /* DetailPage */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -436,8 +439,8 @@ AppModule = __decorate([
                     { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/show-quotes/show-quotes.module#ShowQuotesPageModule', name: 'ShowQuotesPage', segment: 'show-quotes', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/training-courses/training-courses.module#TrainingCoursesPageModule', name: 'TrainingCoursesPage', segment: 'training-courses', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/training-courses/training-courses.module#TrainingCoursesPageModule', name: 'TrainingCoursesPage', segment: 'training-courses', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                 ]
             }),
             __WEBPACK_IMPORTED_MODULE_7_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_8__app_firebase_config__["a" /* FIREBASE_CONFIG */]),
@@ -447,6 +450,7 @@ AppModule = __decorate([
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
         entryComponents: [
             __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_16__pages_detail_detail__["a" /* DetailPage */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -457,7 +461,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_12__providers_auth_service__["a" /* AuthService */],
             __WEBPACK_IMPORTED_MODULE_13__providers_data_service__["a" /* DataService */],
             __WEBPACK_IMPORTED_MODULE_15__services_notes_service__["a" /* NotesService */],
-            __WEBPACK_IMPORTED_MODULE_11__angular_forms__["a" /* FormsModule */]
+            __WEBPACK_IMPORTED_MODULE_11__angular_forms__["a" /* FormsModule */],
         ]
     })
 ], AppModule);
@@ -466,15 +470,15 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 434:
+/***/ 433:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(277);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -510,7 +514,7 @@ MyApp = __decorate([
 
 /***/ }),
 
-/***/ 435:
+/***/ 434:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -525,7 +529,79 @@ var FIREBASE_CONFIG = {
 };
 //# sourceMappingURL=app.firebase.config.js.map
 
+/***/ }),
+
+/***/ 476:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_notes_service__ = __webpack_require__(280);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the DetailPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var DetailPage = (function () {
+    function DetailPage(navCtrl, navParams, notesService) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.notesService = notesService;
+        this.note = { id: null, title: null, description: null };
+        this.id = null;
+        this.id = this.navParams.get('id');
+        if (this.id != 0) {
+            this.note = notesService.getNote(this.id);
+        }
+    }
+    DetailPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DetailPage');
+    };
+    DetailPage.prototype.addNote = function () {
+        if (this.id != 0) {
+            //Editando
+            this.notesService.editNote(this.note);
+            alert('Notitie bijgewerkt!');
+        }
+        else {
+            this.note.id = Date.now();
+            this.notesService.createNote(this.note);
+            alert('Notitie toegevoegd!');
+        }
+        this.navCtrl.pop();
+    };
+    DetailPage.prototype.deleteNote = function () {
+        this.notesService.deleteNote(this.note);
+        alert('Notitie verwijderd!');
+        this.navCtrl.pop();
+    };
+    return DetailPage;
+}());
+DetailPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-detail',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/pages/detail/detail.html"*/'<!--\n  Generated template for the DetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar>\n        <ion-title>Mijn Notities</ion-title>\n    </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <ion-list>\n\n        <ion-item>\n            <ion-label floating>Titel</ion-label>\n            <ion-input type="text" [(ngModel)]="note.title"></ion-input>\n        </ion-item>\n\n        <ion-item>\n            <ion-label floating>Beschrijving</ion-label>\n            <ion-textarea [(ngModel)]="note.description"></ion-textarea>\n        </ion-item>\n    </ion-list>\n    <div padding>\n        <button ion-button block (click)="addNote()">Toevoegen</button>\n        <button *ngIf="id != 0" ion-button block (click)="deleteNote()" color="danger">Verwijderen</button>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/pages/detail/detail.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__services_notes_service__["a" /* NotesService */]])
+], DetailPage);
+
+//# sourceMappingURL=detail.js.map
+
 /***/ })
 
-},[286]);
+},[285]);
 //# sourceMappingURL=main.js.map

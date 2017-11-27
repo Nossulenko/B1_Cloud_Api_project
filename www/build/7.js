@@ -5,10 +5,11 @@ webpackJsonp([7],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrainingCoursesPageModule", function() { return TrainingCoursesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs__ = __webpack_require__(512);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__training_courses__ = __webpack_require__(514);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__ = __webpack_require__(283);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,32 +19,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TabsPageModule = (function () {
-    function TabsPageModule() {
+
+var TrainingCoursesPageModule = (function () {
+    function TrainingCoursesPageModule() {
     }
-    return TabsPageModule;
+    return TrainingCoursesPageModule;
 }());
-TabsPageModule = __decorate([
+TrainingCoursesPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */],
+            __WEBPACK_IMPORTED_MODULE_2__training_courses__["a" /* TrainingCoursesPage */],
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__training_courses__["a" /* TrainingCoursesPage */]),
         ],
     })
-], TabsPageModule);
+], TrainingCoursesPageModule);
 
-//# sourceMappingURL=tabs.module.js.map
+//# sourceMappingURL=training-courses.module.js.map
 
 /***/ }),
 
-/***/ 512:
+/***/ 514:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrainingCoursesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__ = __webpack_require__(283);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -54,30 +61,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 /**
- * Generated class for the TabsPage page.
+ * Generated class for the TrainingCoursesPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var TabsPage = (function () {
-    function TabsPage() {
-        this.tab1Root = 'Home2Page';
-        this.tab2Root = 'ProfilePage';
-        this.tab3Root = 'HomePage';
-        this.tab4Root = 'AgendaPage';
-        this.tab5Root = "ShowQuotesPage";
+var TrainingCoursesPage = (function () {
+    function TrainingCoursesPage(navCtrl, navParams, iab) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.iab = iab;
     }
-    return TabsPage;
+    TrainingCoursesPage.prototype.openWebpage = function (url) {
+        var options = {
+            zoom: 'no'
+        };
+        var browser = this.iab.create(url, '_self', options);
+    };
+    return TrainingCoursesPage;
 }());
-TabsPage = __decorate([
+TrainingCoursesPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-tabs',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/pages/tabs/tabs.html"*/'<ion-tabs>\n    <ion-tab [root]="tab1Root" tabTitle="Notes" tabIcon="book"></ion-tab>\n    <ion-tab [root]="tab2Root" tabTitle="Profile" tabIcon="contact"></ion-tab>\n    <ion-tab [root]="tab3Root" tabTitle="Home" tabIcon="home"></ion-tab>\n    <ion-tab [root]="tab4Root" tabTitle="Agenda" tabIcon="calendar"></ion-tab>\n    <ion-tab [root]="tab5Root" tabTitle="Quotes" tabIcon="quote"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/pages/tabs/tabs.html"*/,
+        selector: 'page-training-courses',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/pages/training-courses/training-courses.html"*/'<!--\n  Generated template for the TrainingCoursesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>TRAINING COURSES</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <img src="assets/img/training_courses1.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=2\')">\n  <img src="assets/img/training_courses2.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=3\')">\n  <img src="assets/img/training_courses3.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=5\')">\n  <img src="assets/img/training_courses4.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=1\')">\n  <img src="assets/img/training_courses5.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=4\')">\n  <img src="assets/img/training_courses6.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=6\')">\n</ion-content>\n'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/pages/training-courses/training-courses.html"*/,
     }),
-    __metadata("design:paramtypes", [])
-], TabsPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__["a" /* InAppBrowser */]])
+], TrainingCoursesPage);
 
-//# sourceMappingURL=tabs.js.map
+//# sourceMappingURL=training-courses.js.map
 
 /***/ })
 
