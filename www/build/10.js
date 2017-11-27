@@ -1,14 +1,14 @@
 webpackJsonp([10],{
 
-/***/ 438:
+/***/ 440:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImmersionPageModule", function() { return ImmersionPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__immersion__ = __webpack_require__(503);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(504);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ImmersionPageModule = (function () {
-    function ImmersionPageModule() {
+var HomePageModule = (function () {
+    function HomePageModule() {
     }
-    return ImmersionPageModule;
+    return HomePageModule;
 }());
-ImmersionPageModule = __decorate([
+HomePageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__immersion__["a" /* ImmersionPage */],
+            __WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__immersion__["a" /* ImmersionPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */]),
         ],
     })
-], ImmersionPageModule);
+], HomePageModule);
 
-//# sourceMappingURL=immersion.module.js.map
+//# sourceMappingURL=home.module.js.map
 
 /***/ }),
 
-/***/ 503:
+/***/ 504:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImmersionPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(57);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the ImmersionPage page.
+ * Generated class for the HomePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var ImmersionPage = (function () {
-    function ImmersionPage(navCtrl, navParams) {
+var HomePage = (function () {
+    function HomePage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    ImmersionPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ImmersionPage');
+    HomePage.prototype.navigateToPage = function (pageName) {
+        this.navCtrl.push(pageName);
     };
-    return ImmersionPage;
+    return HomePage;
 }());
-ImmersionPage = __decorate([
+HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-immersion',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/pages/immersion/immersion.html"*/'<!--\n  Generated template for the ImmersionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>IMMERSION</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/pages/immersion/immersion.html"*/,
+        selector: 'page-home',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/pages/home/home.html"*/'<!--\n  Generated template for the HomePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="secondary">\n    <ion-title>Online Academy</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n    <img src="assets/img/explore-edit.jpg" (click)="navigateToPage(\'ExplorePage\')"alt="explore">\n    <img src="assets/img/training-courses-edit.jpg" (click)="navigateToPage(\'TrainingCoursesPage\')"alt="training courses">\n    <img src="assets/img/immersion-edit.jpg" (click)="navigateToPage(\'ImmersionPage\')" alt="immersion">\n</ion-content>\n'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/pages/home/home.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
-], ImmersionPage);
+], HomePage);
 
-//# sourceMappingURL=immersion.js.map
+//# sourceMappingURL=home.js.map
 
 /***/ })
 

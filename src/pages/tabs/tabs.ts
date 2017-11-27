@@ -20,7 +20,7 @@ tab3Root: string;
 tab4Root: string;
 tab5Root: string;
   constructor() {
-    this.tab1Root = 'JournalPage';
+    this.tab1Root = 'Home2Page';
     this.tab2Root = 'ProfilePage';
     this.tab3Root = 'HomePage';
     this.tab4Root = 'AgendaPage';

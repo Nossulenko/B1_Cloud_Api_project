@@ -15,17 +15,12 @@ import { DataService } from '../providers/data.service';
 import { AngularFireDatabaseModule } from "angularfire2/database";
 import {NotesService} from "../services/notes.service";
 
-
-import { Home2Page } from '../pages/home2/home2';
-import {DetailPage} from "../pages/detail/detail";
-
-
-
 @NgModule({
   declarations: [
     MyApp,
-    Home2Page,
-    DetailPage
+    
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -46,6 +41,8 @@ import {DetailPage} from "../pages/detail/detail";
     InAppBrowser,
     AuthService,
     DataService,
+    NotesService,
+    FormsModule
   ]
 })
 export class AppModule {}

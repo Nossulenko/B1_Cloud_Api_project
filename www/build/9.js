@@ -1,14 +1,14 @@
 webpackJsonp([9],{
 
-/***/ 437:
+/***/ 441:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JournalPageModule", function() { return JournalPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImmersionPageModule", function() { return ImmersionPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__journal__ = __webpack_require__(502);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__immersion__ = __webpack_require__(505);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var JournalPageModule = (function () {
-    function JournalPageModule() {
+var ImmersionPageModule = (function () {
+    function ImmersionPageModule() {
     }
-    return JournalPageModule;
+    return ImmersionPageModule;
 }());
-JournalPageModule = __decorate([
+ImmersionPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__journal__["a" /* JournalPage */],
+            __WEBPACK_IMPORTED_MODULE_2__immersion__["a" /* ImmersionPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__journal__["a" /* JournalPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__immersion__["a" /* ImmersionPage */]),
         ],
     })
-], JournalPageModule);
+], ImmersionPageModule);
 
-//# sourceMappingURL=journal.module.js.map
+//# sourceMappingURL=immersion.module.js.map
 
 /***/ }),
 
-/***/ 502:
+/***/ 505:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JournalPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImmersionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(57);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,26 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the JournalPage page.
+ * Generated class for the ImmersionPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var JournalPage = (function () {
-    function JournalPage(navCtrl, navParams) {
+var ImmersionPage = (function () {
+    function ImmersionPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    return JournalPage;
+    ImmersionPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ImmersionPage');
+    };
+    return ImmersionPage;
 }());
-JournalPage = __decorate([
+ImmersionPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-journal',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/pages/journal/journal.html"*/'<!--\n  Generated template for the JournalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="secondary">\n    <ion-title>Online Academy</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/pages/journal/journal.html"*/,
+        selector: 'page-immersion',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/pages/immersion/immersion.html"*/'<!--\n  Generated template for the ImmersionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>IMMERSION</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/pages/immersion/immersion.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
-], JournalPage);
+], ImmersionPage);
 
-//# sourceMappingURL=journal.js.map
+//# sourceMappingURL=immersion.js.map
 
 /***/ })
 
