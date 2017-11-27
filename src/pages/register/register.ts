@@ -22,13 +22,15 @@ export class RegisterPage {
     if(!event.error) {
       this.toast.create({
         message: `Account created: ${event.result.email}`,
-        duration: 2000
+        duration: 2000,
+        position: 'top'
       }).present();
     }
     else {
       this.toast.create({
         message: `Account not created. ${event.error.message}`,
-        duration: 2000
+        duration: 2000,
+        position: 'top'
       }).present();
     }
   }

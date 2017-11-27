@@ -3,6 +3,7 @@ import {NavController, ToastController} from "ionic-angular";
 import { LoginResponse } from "../../models/login/login-response.interface";
 import {Account} from "../../models/account/account.interface";
 import { AuthService } from "../../providers/auth.service";
+import firebase from 'firebase';
 @Component({
   selector: 'app-login-form>',
   templateUrl: 'login-form.component.html'
@@ -15,13 +16,12 @@ export class LoginFormComponent {
     this.loginStatus = new EventEmitter<LoginResponse>();
   }
      navigateToPage(pageName:string) {
-    pageName === 'TabsPage' ? this.navCtrl.setRoot(pageName) : this.navCtrl.push(pageName);
+    this.navCtrl.setRoot(pageName);
   }
   async login(){
       const loginResponse = await this.auth.SignInWithEmailAndPassword(this.account)
       this.loginStatus.emit(loginResponse);
 
   }
-
 
 }

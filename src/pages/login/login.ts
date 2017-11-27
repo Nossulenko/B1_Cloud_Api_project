@@ -20,7 +20,8 @@ export class LoginPage {
     if(!event.error){
       this.toast.create({
         message: `Welcome to Online Academy, ${event.result.email}`,
-        duration: 2000
+        duration: 2000,
+        position: 'top',
       }).present();
       this.navCtrl.setRoot('TabsPage');
     }
