@@ -17,17 +17,21 @@ import { ToastController } from 'ionic-angular/components/toast/toast-controller
   templateUrl: 'forgot-password.html',
 })
 export class ForgotPasswordPage {
-
+  recovery = "";
   constructor(public navCtrl: NavController, public navParams: NavParams, public auth: AngularFireAuth, private toast: ToastController) {
   }
 
   async forgotpassword(email:string)
   {
     var auth = firebase.auth();
+    this.toast.create({
+      message: "Wachtwoord reset mail succesvol verstuurd.",
+      duration: 5000,
+    }).present();
     try {
       auth.sendPasswordResetEmail(email);
     } catch (error) {
-      console.log('catch');
+      console.log(error);
       this.toast.create({
         message: error.message,
         duration: 5000,
