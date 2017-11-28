@@ -28,9 +28,14 @@ export class ShowQuotesPage {
            return false;
      });
     });
+  
+   
   }
+
   share (quote: string, auteur: string){
-    this.soc.shareViaFacebookWithPasteMessageHint('test');
+    //this.soc.shareViaTwitter(quote + 'gechreven door:' + auteur,'assets/img/BoomB.png', null);
+    this.soc.share(quote, auteur, 'assets/img/BoomB.png', null);
   }
+
 
 }
