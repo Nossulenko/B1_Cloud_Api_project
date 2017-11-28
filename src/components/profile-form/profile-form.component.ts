@@ -6,6 +6,7 @@ import { DataService } from "../../providers/data.service";
 import {AuthService} from '../../providers/auth.service';
 import { User } from "firebase/app";
 import { NavController } from 'ionic-angular/navigation/nav-controller';
+import {App} from 'ionic-angular';
 @Component({
   selector: 'app-profile-form',
   templateUrl: 'profile-form.component.html'
@@ -16,14 +17,14 @@ export class ProfileFormComponent implements OnDestroy {
   private authenticatedUser: User;
   profile = {} as Profile;
 
-  constructor(private auth: AuthService, private data: DataService,private navCtrl: NavController) {
+  constructor(private auth: AuthService, private data: DataService,private navCtrl: NavController, private app: App) {
     this.authenticatedUser$ = this.auth.getAuthenticatedUser().subscribe((user: User)=> {
       this.authenticatedUser = user
     })
   }
   signOut(){
     this.auth.signOut();
-    this.navCtrl.setRoot('WelcomePage');
+    this.app.getRootNav().setRoot('WelcomePage');
   }
 
   async saveProfile(){
