@@ -15,6 +15,7 @@
             <p>{{quotes.Day}}/{{quotes.Month}}/{{quotes.Year}}</p>
             <i text-wrap>"{{quotes.Quote}}"</i>
           <p>{{quotes.Auteur}}</p>
+          <img src="assets/img/share.png" alt="share" id="share-button" (click)="share(quotes.Quote, quotes.Auteur)">
         </div>
       </ion-item>
   </ion-list>

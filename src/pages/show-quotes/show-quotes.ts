@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import firebase from 'firebase';
-
+import { SocialSharing } from '@ionic-native/social-sharing';
 import { AngularFireDatabase } from "angularfire2/database";
 @IonicPage()
 @Component({
@@ -13,7 +13,7 @@ export class ShowQuotesPage {
   QuotesRef: firebase.database.Reference = firebase.database().ref('/quotes/');
   //Array to hold quotes
   Quotes : Array<any> = [];
-  constructor(public navCtrl: NavController, public navParams: NavParams, private afdb: AngularFireDatabase) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private afdb: AngularFireDatabase, private soc: SocialSharing) {
   }
 
   navigateToPage(pageName:string) {
@@ -28,6 +28,9 @@ export class ShowQuotesPage {
            return false;
      });
     });
+  }
+  share (quote: string, auteur: string){
+    this.soc.shareViaFacebookWithPasteMessageHint('test');
   }
 
 }

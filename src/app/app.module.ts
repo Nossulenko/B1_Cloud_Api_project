@@ -16,6 +16,7 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
 import {NotesService} from "../services/notes.service";
 import { NavParams } from 'ionic-angular/navigation/nav-params';
 import { DetailPage } from '../pages/detail/detail';
+import {SocialSharing} from '@ionic-native/social-sharing'
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { DetailPage } from '../pages/detail/detail';
     DataService,
     NotesService,
     FormsModule,
+    SocialSharing,
     
   ]
 })
