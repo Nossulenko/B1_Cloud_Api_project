@@ -1,7 +1,7 @@
 <form #loginForm="ngForm" novalidate>
 <div class="inputs">
         
-<ion-row><ion-item><ion-input 
+<ion-row><ion-input 
     [(ngModel)]="account.email" 
     type="email" 
     placeholder="E-mail" 
@@ -10,10 +10,9 @@
      #email="ngModel" 
      required
      pattern="[a-z0-9!#$%&'*+/=?^_`{\}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{\}~-]+)*@(?:[a-z0-9](?:[a-z0-9]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"></ion-input>
-     </ion-item>
     </ion-row>
     <div *ngIf="email.invalid && email.dirty">
-            <span class="global__input-error">Email addreess is not valid</span>
+            <span class="global__input-error">Vul een geldig email adres in aub</span>
             </div>
 <ion-row><ion-input
     [(ngModel)]="account.password" 

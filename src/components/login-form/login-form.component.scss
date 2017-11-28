@@ -32,4 +32,10 @@ label{
 #login{
     margin-top: 10px;
 }
-
+.custom-login-label input[type]{
+    margin-left: 20px;
+}
+.custom-login-label i {
+    position: absolute;
+    bottom: 12px;
+}
