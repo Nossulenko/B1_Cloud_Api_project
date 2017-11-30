@@ -9,11 +9,13 @@
 <ion-content padding>
     <ion-list>
         <ion-item *ngFor="let note of notes">
-            {{note.Note.title}}
-            {{note.Note.description}}
-            {{note.User}}
-            {{note.Note.id}}
+                <div class="w3-panel w3-pale-blue w3-leftbar w3-border-blue">
+                        <p>{{note.Note.title}}
+                                {{note.Note.description}}</p>
+                      </div>
+            <button ion-button (click)="goToDetail(note.Note.id)">Naar detail</button>
         </ion-item>
+
         <!-- <button ion-item *ngFor="let note of notes" (click)="goToDetail(note.id)">
       {{ note.Note.title }}
     </button> -->

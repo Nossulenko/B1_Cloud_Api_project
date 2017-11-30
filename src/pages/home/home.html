@@ -14,7 +14,17 @@
 
 
 <ion-content>
-    <img src="assets/img/explore-edit.jpg" (click)="navigateToPage('ExplorePage')"alt="explore">
-    <img src="assets/img/training-courses-edit.jpg" (click)="navigateToPage('TrainingCoursesPage')"alt="training courses">
-    <img src="assets/img/immersion-edit.jpg" (click)="navigateToPage('ImmersionPage')" alt="immersion">
+  <div class="image-container">
+    <img src="assets/img/explore.jpg" (click)="navigateToPage('ExplorePage')"alt="explore">
+    <div class="centered">Modules van master in business</div>
+    <div clas="right"><img src="assets/img/arrow.png"></div>
+  </div>
+  <div class="image-container">
+    <img src="assets/img/training_courses.png" (click)="navigateToPage('TrainingCoursesPage')"alt="training courses">
+    <div class="centered">Bonus materiaal</div>
+  </div>
+  <div class="image-container">
+    <img src="assets/img/immersion.jpg" (click)="navigateToPage('ImmersionPage')" alt="immersion">
+    <div class="centered">Opleidingen</div>
+  </div>
 </ion-content>

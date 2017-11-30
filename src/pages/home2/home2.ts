@@ -24,11 +24,6 @@ export class Home2Page {
   constructor(public navCtrl: NavController, public notesService : NotesService ) {
     
   }
-  // public filterNotes(): any {
-  //   this.notes.filter((item) => {
-  //     item.User.indexOf(this.userID) > -1
-  //   })
-  // }
 
   public getNotes(): any{
     this.user = firebase.auth().currentUser;
@@ -41,8 +36,6 @@ export class Home2Page {
         this.notes.push(note.val());
         return false;
       });
-      console.log(this.notes);
-      console.log(this.userID);
       this.notes= this.notes.filter(note => note.User === this.userID);
     });
 
@@ -51,9 +44,9 @@ export class Home2Page {
 
 
 
-  // public goToDetail(id){
-  //   this.navCtrl.push(DetailPage, {id:id})
-  // }
+  public goToDetail(id){
+    this.navCtrl.push(DetailPage, {id:id})
+  }
 
   public createNote(){
     this.navCtrl.push(DetailPage, {id:0})

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {NotesService} from "../../services/notes.service";
+import firebase from 'firebase';
 
 /**
  * Generated class for the DetailPage page.
@@ -15,13 +16,18 @@ import {NotesService} from "../../services/notes.service";
   templateUrl: 'detail.html',
 })
 export class DetailPage {
+  notesRef: firebase.database.Reference;
   note = {id:null,title:null,description:null};
   id = null;
   constructor(public navCtrl: NavController, public navParams: NavParams, public notesService : NotesService) {
+
     this.id = this.navParams.get('id');
-    if (this.id != 0){
-      this.note = notesService.getNote(this.id);
-    }
+    console.log(this.id);
+   this.notesRef = firebase.database().ref('/notes/Note/'+this.id);
+  this.notesRef.on('value', function(snapshot){
+     console.log(snapshot.val());
+   })
+  
   }
 
   ionViewDidLoad() {
