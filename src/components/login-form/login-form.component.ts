@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output,} from '@angular/core';
+import { Component, EventEmitter, Output} from '@angular/core';
 import {NavController, ToastController} from "ionic-angular";
 import { LoginResponse } from "../../models/login/login-response.interface";
 import {Account} from "../../models/account/account.interface";
@@ -16,11 +16,12 @@ export class LoginFormComponent {
     this.loginStatus = new EventEmitter<LoginResponse>();
   }
      navigateToPage(pageName:string) {
-    this.navCtrl.setRoot(pageName);
+    this.navCtrl.push(pageName);
   }
   async login(){
       const loginResponse = await this.auth.SignInWithEmailAndPassword(this.account)
       this.loginStatus.emit(loginResponse);
+
 
   }
 

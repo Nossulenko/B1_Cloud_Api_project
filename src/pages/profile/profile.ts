@@ -20,6 +20,10 @@ export class ProfilePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private auth: AuthService) {
   }
 
+
+saveProfileResult(event: Boolean){
+  event ? this.navCtrl.setRoot('TabsPage') : console.log('not Authenticated or saved');
+}
   
 
 }

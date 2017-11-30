@@ -21,7 +21,7 @@ tab4Root: string;
 tab5Root: string;
   constructor() {
     this.tab1Root = 'Home2Page';
-    this.tab2Root = 'ProfilePage';
+    this.tab2Root = 'ProfileViewPage';
     this.tab3Root = 'HomePage';
     this.tab4Root = 'AgendaPage';
     this.tab5Root = "ShowQuotesPage";
