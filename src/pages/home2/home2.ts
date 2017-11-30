@@ -16,10 +16,11 @@ export class Home2Page {
   @ViewChild('myNav') nav: NavController;
   constructor(public navCtrl: NavController, public notesService : NotesService ) {
     this.notes = notesService.getNotes();
+    console.log(this.notes);
   }
-  public goToDetail(id){
-    this.navCtrl.push(DetailPage, {id:id})
-  }
+  // public goToDetail(id){
+  //   this.navCtrl.push(DetailPage, {id:id})
+  // }
 
   public createNote(){
     this.navCtrl.push(DetailPage, {id:0})

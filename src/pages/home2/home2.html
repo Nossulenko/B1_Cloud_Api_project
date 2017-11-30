@@ -9,7 +9,8 @@
 <ion-content padding>
     <ion-list>
         <button ion-item *ngFor="let note of notes" (click)="goToDetail(note.id)">
-      {{ note.title }}
+      {{ note.Note.title }}
+      {{note.User}}
     </button>
     </ion-list>
     <div padding>
