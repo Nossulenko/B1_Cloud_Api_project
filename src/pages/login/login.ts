@@ -22,9 +22,14 @@ export class LoginPage {
     this.loginStatus = new EventEmitter<any>();
   }
 
-  // ngOnDestroy(){
-  //   this.profile$.unsubscribe();
-  //  }
+  ngOnDestroy(){
+    if(this.profile$)
+    {
+      this.profile$.unsubscribe();
+    }
+    
+    console.log("Subscription destroyed");
+   }
   login(event: LoginResponse){
     if(!event.error){
       this.toast.create({

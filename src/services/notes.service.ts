@@ -19,29 +19,7 @@ export class NotesService{
   //Get current user
 
 
-  public getNotes(): any{
-   //ToDO: //Get all notes associated with this.userID
-
-    //return this.notes;
- 
-    
-    this.notesRef.on('value', notesList => {
-      this.notes = [];
-      notesList.forEach(note => {
-        this.notes.push(note.val());
-        return true;
-      });
-      return this.notes;
-    });
-
-    // console.log(this.notes);
-    // if(this.notes =! undefined)
-    // {
-    // this.notes.filter((v) => {
-    //   return v.User = this.userID;
-    // });
-    // }
-  }
+  
   public getNote(id){
     return this.notes.filter(function (e, i) {return e.id == id})[0] || {id:null,title:null,description:null};
   }

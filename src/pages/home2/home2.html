@@ -8,10 +8,15 @@
 
 <ion-content padding>
     <ion-list>
-        <button ion-item *ngFor="let note of notes" (click)="goToDetail(note.id)">
+        <ion-item *ngFor="let note of notes">
+            {{note.Note.title}}
+            {{note.Note.description}}
+            {{note.User}}
+            {{note.Note.id}}
+        </ion-item>
+        <!-- <button ion-item *ngFor="let note of notes" (click)="goToDetail(note.id)">
       {{ note.Note.title }}
-      {{note.User}}
-    </button>
+    </button> -->
     </ion-list>
     <div padding>
         <button ion-button block (click)="createNote()">Nieuwe notitie maken</button>
