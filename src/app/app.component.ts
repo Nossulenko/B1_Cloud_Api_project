@@ -13,7 +13,7 @@ export class MyApp {
   constructor(platform: Platform, private auth: AuthService) {
 
     this.auth.getAuthenticatedUser().subscribe(auth => {
-      !auth ? this.rootPage = 'LoginPage': this.rootPage = 'TabsPage';
+      !auth ? this.rootPage = 'WelcomePage': this.rootPage = 'TabsPage';
     })
 
 

@@ -14,11 +14,38 @@ import firebase from 'firebase';
 })
 export class Home2Page {
   notesRef: firebase.database.Reference = firebase.database().ref('/notes/');
-  notes = [];
+  notes;
+
+  user = firebase.auth().currentUser;
+  userID;
+  
+  if (user) {
+   this.userID = this.user.uid;
+  }
+
+
   @ViewChild('myNav') nav: NavController;
   constructor(public navCtrl: NavController, public notesService : NotesService ) {
     
   }
+  // public filterNotes(): any {
+  //   this.notes.filter((item) => {
+  //     item.User.indexOf(this.userID) > -1
+  //   })
+  // }
+
+  public getNotes(): any{
+    this.notesRef.on('value', notesList => {
+      this.notes = [];
+      notesList.forEach(note => {
+        this.notes.push(note.val());
+        return false;
+      });
+    });
+  }
+
+
+
   // public goToDetail(id){
   //   this.navCtrl.push(DetailPage, {id:id})
   // }
@@ -29,27 +56,10 @@ export class Home2Page {
   
   ionViewDidLoad() {
     this.getNotes();
+    //this.filterNotes();
+    
   }
 
-  public getNotes(): any{
-  
-     
-     this.notesRef.on('value', notesList => {
-       this.notes = [];
-       notesList.forEach(note => {
-         this.notes.push(note.val());
-         return false;
-       });
-     });
 
-    
-     // console.log(this.notes);
-     // if(this.notes =! undefined)
-     // {
-     // this.notes.filter((v) => {
-     //   return v.User = this.userID;
-     // });
-     // }
-   }
 
 }

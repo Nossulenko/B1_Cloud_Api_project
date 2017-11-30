@@ -27,8 +27,6 @@ export class LoginPage {
     {
       this.profile$.unsubscribe();
     }
-    
-    console.log("Subscription destroyed");
    }
   login(event: LoginResponse){
     if(!event.error){
