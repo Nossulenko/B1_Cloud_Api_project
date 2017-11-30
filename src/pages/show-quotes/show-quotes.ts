@@ -15,7 +15,7 @@ export class ShowQuotesPage {
   //Array to hold quotes
   Quotes : Array<any> = [];
   loader: Loading;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private afdb: AngularFireDatabase, private soc: SocialSharing, private loading: LoadingController) {
+  constructor(public af: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams, private afdb: AngularFireDatabase, private soc: SocialSharing, private loading: LoadingController) {
   this.loader = this.loading.create({
     content: 'Quotes laden...'
   })
@@ -34,7 +34,6 @@ export class ShowQuotesPage {
            return false;
      });
     });
-  
     this.loader.dismiss();
   }
 

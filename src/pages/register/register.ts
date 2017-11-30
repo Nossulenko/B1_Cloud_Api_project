@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, ToastController } from 'ionic-angular';
 import { LoginResponse } from "../../models/login/login-response.interface";
-/**
- * Generated class for the RegisterPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {Subscription} from 'rxjs/Subscription';
+import { DataService } from '../../providers/data.service';
+import {  User } from 'firebase';
+import { NavController } from 'ionic-angular/navigation/nav-controller';
 
 @IonicPage()
 @Component({
@@ -15,8 +13,8 @@ import { LoginResponse } from "../../models/login/login-response.interface";
 })
 export class RegisterPage {
   account = {} as Account
-
-  constructor(private toast: ToastController) {
+  profile$: Subscription;
+  constructor(private toast: ToastController, private data: DataService, public navCtrl: NavController) {
   }
   register(event){
     if(!event.error) {
@@ -25,6 +23,13 @@ export class RegisterPage {
         duration: 2000,
         position: 'top'
       }).present();
+
+      this.profile$ = this.data.getProfile(<User>event.result)
+      .snapshotChanges() // return an Observable
+      .subscribe(action => {
+        console.log(action.payload.val());
+        action.payload.val() ? this.navCtrl.setRoot('TabsPage') : this.navCtrl.setRoot('ProfilePage');
+      });
     }
     else {
       this.toast.create({

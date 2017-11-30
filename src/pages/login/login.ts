@@ -46,12 +46,16 @@ export class LoginPage {
 
     }
     else {
-      this.toast.create({
-        message: event.error.message,
-        duration: 2000
-      }).present();
-    }
-    console.log(event);
+      if(event.error.message = "There is no user record corresponding to this identifier. The user may have been delted")
+      {
+        this.toast.create({
+          message: "Verkeerde combinatie email/wachtwoord of gebruiker bestaat niet.",
+          duration: 2000
+        }).present();
+      }
+      console.log(event);
+      }
+
 
   }
   navigateToPage(pageName:string) {

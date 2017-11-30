@@ -21,8 +21,30 @@ $app-direction: ltr;
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
+// Use the primary color as the background for the toolbar-md-background
+$toolbar-md-background:    rgb(17, 40, 71);
 
+$text-input-highlight-color-valid : rgb(176, 16, 16);
 
+input::-webkit-input-placeholder {
+  color: rgb(255, 255, 255) !important;
+  }
+   
+  input:-moz-placeholder { /* Firefox 18- */
+  color: rgb(255, 255, 255) !important;  
+  }
+   
+  input::-moz-placeholder {  /* Firefox 19+ */
+  color: rgb(255, 255, 255) !important;  
+  }
+   
+  input:-ms-input-placeholder {  
+  color: rgb(255, 255, 255) !important;  
+  }
+
+  .container { 
+    background-color: rgb(17, 40, 71);
+  }
 
 
 // Named Color Variables

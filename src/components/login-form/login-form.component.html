@@ -1,7 +1,9 @@
+
+<div class="container">
 <form #loginForm="ngForm" novalidate>
 <div class="inputs">
         
-<ion-row><ion-input 
+<ion-row><ion-input
     [(ngModel)]="account.email" 
     type="email" 
     placeholder="E-mail" 
@@ -27,4 +29,4 @@
 <label class="label1" (click)="navigateToPage('ForgotPasswordPage')">Wachtwoord vergeten</label>
 <label class="label2" (click)="navigateToPage('RegisterPage')">Registreer nu!</label>
 </form>
-
+</div>

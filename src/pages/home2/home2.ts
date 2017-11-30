@@ -18,10 +18,6 @@ export class Home2Page {
 
   user = firebase.auth().currentUser;
   userID;
-  
-  if (user) {
-   this.userID = this.user.uid;
-  }
 
 
   @ViewChild('myNav') nav: NavController;
@@ -35,13 +31,22 @@ export class Home2Page {
   // }
 
   public getNotes(): any{
+    this.user = firebase.auth().currentUser;
+    if (this.user) {
+      this.userID = this.user.uid;
+     }
     this.notesRef.on('value', notesList => {
       this.notes = [];
       notesList.forEach(note => {
         this.notes.push(note.val());
         return false;
       });
+      console.log(this.notes);
+      console.log(this.userID);
+      this.notes= this.notes.filter(note => note.User === this.userID);
     });
+
+    
   }
 
 
