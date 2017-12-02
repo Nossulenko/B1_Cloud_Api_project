@@ -1,9 +1,10 @@
 import {Component, ViewChild} from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {NotesService} from "../../services/notes.service";
-import {DetailPage} from "../detail/detail";
 import { IonicPage, NavParams } from 'ionic-angular';
-import firebase from 'firebase';
+import { NotesService } from '../../providers/notes.service';
+import { Observable } from 'rxjs/Observable';
+import { Item } from 'ionic-angular/components/item/item';
+import { ToastService } from '../../providers/toast.service';
 
 @IonicPage()
 @Component({
@@ -13,51 +14,24 @@ import firebase from 'firebase';
   
 })
 export class Home2Page {
-  notesRef: firebase.database.Reference = firebase.database().ref('/notes/');
-  notes;
+  Notes$: Observable<Item[]>;
 
-  user = firebase.auth().currentUser;
-  userID;
+  constructor(public navCtrl: NavController, private toast: ToastService,private notesservice: NotesService) {
+    this.Notes$ = this.notesservice.getNotes()//List of Notes
+    .snapshotChanges() // Key and value 
+    .map(
+      changes => {
+        return changes.map(c => ({
+          key: c.payload.key, ...c.payload.val()
+        }))
+      }
+    )
 
-
-  @ViewChild('myNav') nav: NavController;
-  constructor(public navCtrl: NavController, public notesService : NotesService ) {
-    
-  }
-
-  public getNotes(): any{
-    this.user = firebase.auth().currentUser;
-    if (this.user) {
-      this.userID = this.user.uid;
-     }
-    this.notesRef.on('value', notesList => {
-      this.notes = [];
-      notesList.forEach(note => {
-        this.notes.push(note.val());
-        return false;
-      });
-      this.notes= this.notes.filter(note => note.User === this.userID);
-    });
-
-    
   }
 
 
-
-  public goToDetail(id){
-    this.navCtrl.push(DetailPage, {id:id})
-  }
-
-  public createNote(){
-    this.navCtrl.push(DetailPage, {id:0})
-  }
-  
-  ionViewDidLoad() {
-    this.getNotes();
-    //this.filterNotes();
-    
-  }
-
-
+goToAdd(){
+  this.navCtrl.push("AddNotePage");
+}
 
 }

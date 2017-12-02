@@ -4,16 +4,20 @@ import firebase from 'firebase';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { AngularFireDatabase } from "angularfire2/database";
 import { LoadingController, Loading } from 'ionic-angular';
-@IonicPage()
+import {Quote} from '../../models/quote/quote.interface';
+
 @Component({
   selector: 'page-show-quotes',
   templateUrl: 'show-quotes.html',
+})
+@IonicPage({
+  name: 'show-quotes-page',
 })
 export class ShowQuotesPage {
   //Reference to firebase quotes
   QuotesRef: firebase.database.Reference = firebase.database().ref('/quotes/');
   //Array to hold quotes
-  Quotes : Array<any> = [];
+  Quotes : Array<Quote> = [];
   loader: Loading;
   constructor(public af: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams, private afdb: AngularFireDatabase, private soc: SocialSharing, private loading: LoadingController) {
   this.loader = this.loading.create({

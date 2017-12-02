@@ -13,15 +13,14 @@ import {FormsModule} from '@angular/forms';
 import { AuthService } from '../providers/auth.service';
 import { DataService } from '../providers/data.service';
 import { AngularFireDatabaseModule } from "angularfire2/database";
-import {NotesService} from "../services/notes.service";
 import { NavParams } from 'ionic-angular/navigation/nav-params';
-import { DetailPage } from '../pages/detail/detail';
 import {SocialSharing} from '@ionic-native/social-sharing'
+import { NotesService } from '../providers/notes.service';
+import { ToastService } from '../providers/toast.service';
 
 @NgModule({
   declarations: [
     MyApp,
-    DetailPage
     
     
     
@@ -36,7 +35,6 @@ import {SocialSharing} from '@ionic-native/social-sharing'
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    DetailPage
     
   ],
   providers: [
@@ -47,9 +45,10 @@ import {SocialSharing} from '@ionic-native/social-sharing'
     InAppBrowser,
     AuthService,
     DataService,
-    NotesService,
     FormsModule,
     SocialSharing,
+    NotesService,
+    ToastService
     
   ]
 })

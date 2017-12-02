@@ -23,6 +23,9 @@ $app-direction: ltr;
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 // Use the primary color as the background for the toolbar-md-background
 
+$item-md-detail-push-show: true;
+$item-wp-detail-push-show: true;
+
 .container { 
   background-color: #002137;
 }

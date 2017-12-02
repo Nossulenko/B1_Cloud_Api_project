@@ -1,26 +1,20 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar color="primary">
         <ion-title>
             Mijn MiR Journal
         </ion-title>
+        <ion-buttons end>
+            <button (click)="goToAdd()"ion-button>
+                <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
     </ion-navbar>
 </ion-header>
 
 <ion-content padding>
     <ion-list>
-        <ion-item *ngFor="let note of notes">
-                <div class="w3-panel w3-pale-blue w3-leftbar w3-border-blue">
-                        <p>{{note.Note.title}}
-                                {{note.Note.description}}</p>
-                      </div>
-            <button ion-button (click)="goToDetail(note.Note.id)">Naar detail</button>
+        <ion-item detail-push *ngFor="let note of Notes$ | async" navPush="EditNotePage" [navParams]="{note: note}">
+            {{note.title}}
         </ion-item>
-
-        <!-- <button ion-item *ngFor="let note of notes" (click)="goToDetail(note.id)">
-      {{ note.Note.title }}
-    </button> -->
     </ion-list>
-    <div padding>
-        <button ion-button block (click)="createNote()">Nieuwe notitie maken</button>
-    </div>
 </ion-content>
