@@ -21,7 +21,7 @@ export class EditNotePage {
   }
   saveNote(note: Note){
 this.notesservice.editNote(note).then(() => {
-  this.toast.show(`${note.title} is opgeslagen`);
+  this.toast.show(`Notitie opgeslagen`);
   this.navCtrl.setRoot('Home2Page');
 })
 
@@ -29,7 +29,7 @@ this.notesservice.editNote(note).then(() => {
 
   removeNote(note: Note) {
     this.notesservice.removeNote(note).then(()=> {
-      this.toast.show(`${note.title} verwijderd`);
+      this.toast.show(`Notitie verwijderd`);
       this.navCtrl.setRoot('Home2Page');
     })
   }

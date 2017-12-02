@@ -11,7 +11,7 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="container">
     <ion-list>
         <ion-item detail-push *ngFor="let note of Notes$ | async" navPush="EditNotePage" [navParams]="{note: note}">
             {{note.title}}
