@@ -10,8 +10,7 @@ import {Quote} from '../../models/quote/quote.interface';
   selector: 'page-show-quotes',
   templateUrl: 'show-quotes.html',
 })
-@IonicPage({
-})
+@IonicPage()
 export class ShowQuotesPage {
   //Reference to firebase quotes
   QuotesRef: firebase.database.Reference = firebase.database().ref('/quotes/');
