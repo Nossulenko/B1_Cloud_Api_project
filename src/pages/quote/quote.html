@@ -6,10 +6,14 @@
 </ion-header>
 
 
-<ion-content class="container">
-    <ion-row><label>Auteur van de quote:</label></ion-row>
-    <ion-input [(ngModel)]="quote.author" type="text" placeholder="Auteur van de quote"></ion-input>
+<ion-content class="container" padding>
+    <ion-card>
+        <ion-card-content>
+    <ion-row><label>Auteur:</label></ion-row>
+    <ion-input [(ngModel)]="quote.author" type="text" placeholder="Auteur"></ion-input>
     <ion-row><label>Quote:</label></ion-row>
     <ion-textarea [(ngModel)]="quote.quote" type="text" placeholder="Uw quote" id="quote"></ion-textarea>
     <button ion-button block clear (click)="addQuote(quote.author,quote.quote)">Opslaan</button>
+</ion-card-content>
+</ion-card>
 </ion-content>

@@ -14,9 +14,9 @@
 
 <ion-content class="container">
   <ion-list *ngIf="Quotes !== null">
-    <ion-item  *ngFor="let quotes of Quotes">
+    <ion-item  *ngFor="let quotes of Quotes" class="dark">
 
-      <div class="w3-panel w3-leftbar w3-light-grey">
+      <div class="w3-panel w3-leftbar w3-light-grey dark"  padding>
           {{quotes.Day}}/{{quotes.Month}}/{{quotes.Year}}
           <p class="w3-xlarge w3-serif">
             <i text-wrap>"{{quotes.Quote}}"</i>
