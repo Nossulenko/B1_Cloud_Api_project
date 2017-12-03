@@ -1,10 +1,8 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component} from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { IonicPage, NavParams } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
 import { NotesService } from '../../providers/notes.service';
 import { Observable } from 'rxjs/Observable';
-import { ToastService } from '../../providers/toast.service';
-import firebase, { User } from 'firebase';
 import { Note } from 'ionic-angular/components/note/note';
 
 @IonicPage()
@@ -16,7 +14,7 @@ import { Note } from 'ionic-angular/components/note/note';
 })
 export class Home2Page {
   Notes$: Observable<Note[]>;
-  constructor(public navCtrl: NavController, private toast: ToastService,private notesservice: NotesService) {
+  constructor(public navCtrl: NavController,private notesservice: NotesService) {
     this.Notes$ = this.notesservice.getNotes()//List of Notes
     .snapshotChanges() // Key and value 
     .map(

@@ -11,7 +11,6 @@ import {Quote} from '../../models/quote/quote.interface';
   templateUrl: 'show-quotes.html',
 })
 @IonicPage({
-  name: 'show-quotes-page',
 })
 export class ShowQuotesPage {
   //Reference to firebase quotes
@@ -39,11 +38,6 @@ export class ShowQuotesPage {
      });
     });
     this.loader.dismiss();
-  }
-
-  share (quote: string, auteur: string){
-    //this.soc.shareViaTwitter(quote + 'gechreven door:' + auteur,'assets/img/BoomB.png', null);
-    this.soc.share(quote, "Quote van Online Academy geschreven door: " + auteur, "assets/imgs/boomB.png", null);
   }
 
 
