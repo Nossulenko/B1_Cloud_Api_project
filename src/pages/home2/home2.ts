@@ -16,8 +16,6 @@ import { Note } from 'ionic-angular/components/note/note';
 })
 export class Home2Page {
   Notes$: Observable<Note[]>;
-  user: User;
-  UserId: any;
   constructor(public navCtrl: NavController, private toast: ToastService,private notesservice: NotesService) {
     this.Notes$ = this.notesservice.getNotes()//List of Notes
     .snapshotChanges() // Key and value 
@@ -28,24 +26,9 @@ export class Home2Page {
         }))
       }
     )
-    this.user = firebase.auth().currentUser;
-    
-    if (this.user) {
-      this.UserId= this.user.uid;
-    } 
-    console.log(this.Notes$.map(
-      changes => {
-        return changes.map(c => ({
-          key: c.payload.key, ...c.payload.val()
-        }))
-      }
-    ));
-    this.Notes$ = this.Notes$.filter(note => note.userID = this.UserId)
     
 
   }
-
-
 goToAdd(){
   this.navCtrl.push("AddNotePage");
 }

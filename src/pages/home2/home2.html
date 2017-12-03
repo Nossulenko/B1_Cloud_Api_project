@@ -12,9 +12,11 @@
 </ion-header>
 
 <ion-content padding class="container">
-    <ion-list>
+    <ion-list *ngIf="Notes$ !== undefined">
         <ion-item detail-push *ngFor="let note of Notes$ | async" navPush="EditNotePage" [navParams]="{note: note}">
             {{note.title}}
         </ion-item>
     </ion-list>
+
+    <p *ngIf="Notes$ === undefined">Nog geen notities, voeg een notitie toe.</p>
 </ion-content>

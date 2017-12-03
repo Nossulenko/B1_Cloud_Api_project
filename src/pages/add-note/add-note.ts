@@ -10,9 +10,8 @@ import { ToastService } from '../../providers/toast.service';
 })
 export class AddNotePage {
   note: Note = {
-    title: "titel",
-    description: "beschrijving",
-    userID: "id",
+    title: "",
+    description: "",
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private notesservice: NotesService, private toast: ToastService) {

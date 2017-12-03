@@ -40,7 +40,6 @@ export class LoginPage {
    this.profile$ = this.data.getProfile(<User>event.result)
    .snapshotChanges() // return an Observable
    .subscribe(action => {
-     console.log(action.payload.val());
      action.payload.val() ? this.navCtrl.setRoot('TabsPage') : this.navCtrl.setRoot('ProfilePage');
    });
 
