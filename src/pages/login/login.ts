@@ -31,7 +31,7 @@ export class LoginPage {
   login(event: LoginResponse){
     if(!event.error){
       this.toast.create({
-        message: `Welcome to Online Academy, ${event.result.email}`,
+        message: `Welcome to the BuriedONE app, ${event.result.email}`,
         duration: 2000,
         position: 'top',
       }).present();
@@ -48,7 +48,7 @@ export class LoginPage {
       if(event.error.message = "There is no user record corresponding to this identifier. The user may have been delted")
       {
         this.toast.create({
-          message: "Verkeerde combinatie email/wachtwoord of gebruiker bestaat niet.",
+          message: "Wrong combination user/email or user doesn't exist.",
           duration: 2000
         }).present();
       }
