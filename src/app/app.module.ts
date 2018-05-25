@@ -18,7 +18,7 @@ import { NavParams } from 'ionic-angular/navigation/nav-params';
 import {SocialSharing} from '@ionic-native/social-sharing'
 import { NotesService } from '../providers/notes.service';
 import { ToastService } from '../providers/toast.service';
-import { ApiProvider } from '../providers/api/api';
+
 
 
 @NgModule({
@@ -55,7 +55,7 @@ import { ApiProvider } from '../providers/api/api';
     NotesService,
     ToastService,
     HttpModule,
-    ApiProvider,
+    
     
    
     

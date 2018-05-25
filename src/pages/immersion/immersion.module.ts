@@ -10,6 +10,8 @@ import { ImmersionPage } from './immersion';
   ],
   imports: [
     IonicPageModule.forChild(ImmersionPage),
+    HttpModule,
+    
     
   ],
   providers: [

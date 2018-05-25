@@ -37,8 +37,7 @@ export class ImmersionPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ImmersionPage');
     this.loadJson()
-    this.loadCoin()
-    //this.loadCoin();
+    
   }
   loadJson(){
     this.http.get('https://randomuser.me/api/?results=10')
@@ -50,20 +49,8 @@ export class ImmersionPage {
       console.log(err);
     })
     
-  }
-  loadCoin(){
-    this.http.get('https://api.coinmarketcap.com/v2/listings/')
-    .map(res => res.json())
-    .subscribe(res => {
-      this.coinData = res.results;
-      console.log(res.results);
-    }, err =>{
-      console.log(err);
-    })
-
-  }
-
-  }
+  } 
+}
 
 
 

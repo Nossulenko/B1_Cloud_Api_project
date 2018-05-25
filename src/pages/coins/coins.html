@@ -15,4 +15,30 @@
 
 <ion-content padding>
 
+    <ion-row>
+        <ion-col>
+          <div *ngFor="let item of coinData">
+            <ion-card>
+            <ion-item>
+              <h2>{{item.name}}</h2>
+              <p>{{item.symbol}}</p>
+              <p>{{item.website_slug}}</p>
+            </ion-item>
+            
+            <!--<ion-card-content>
+              <p>{{item.location.street}}, {{item.location.city}} 
+              {{item.location.state}}.</p>
+              <p>{{item.location.postcode}}</p>
+              <p>{{item.nat}}</p>
+            </ion-card-content>-->
+  
+            <ion-row>
+              <ion-col>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+          </div>
+        </ion-col>
+      </ion-row>
+
 </ion-content>

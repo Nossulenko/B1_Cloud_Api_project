@@ -32,9 +32,10 @@ ImmersionPageModule = __decorate([
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__immersion__["a" /* ImmersionPage */]),
+            __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* HttpModule */],
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* HttpModule */]
+            __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* HttpModule */]
         ]
     })
 ], ImmersionPageModule);
@@ -107,9 +108,9 @@ ImmersionPage = __decorate([
 /* unused harmony export ResponseContentType */
 /* unused harmony export ResponseType */
 /* unused harmony export Headers */
-/* unused harmony export Http */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Http; });
 /* unused harmony export Jsonp */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return HttpModule; });
 /* unused harmony export JsonpModule */
 /* unused harmony export Connection */
 /* unused harmony export ConnectionBackend */
