@@ -16,29 +16,54 @@ import 'rxjs/add/operator/map'
   selector: 'page-immersion',
   templateUrl: 'immersion.html',
   
+  
 })
 export class ImmersionPage {
 
   url:string;
-  data:string;
-  constructor(public http: Http, public navCtrl: NavController, public navParams: NavParams) {
+  userData:string;
+  coinData:string;
+  id:number;
+  
+   
 
+
+
+  constructor(public http: Http, public navCtrl: NavController, public navParams: NavParams) {
+    
+   
   }
   
   ionViewDidLoad() {
     console.log('ionViewDidLoad ImmersionPage');
-    this.loadUser();
+    this.loadJson()
+    this.loadCoin()
+    //this.loadCoin();
   }
-  loadUser(){
-
-    this.http.get('https://randomuser.me/api/?results=50')
+  loadJson(){
+    this.http.get('https://randomuser.me/api/?results=10')
     .map(res => res.json())
-    .subscribe(data => {
-      this.data = data.results;
-      console.log(data.results);
+    .subscribe(res => {
+      this.userData = res.results;
+      console.log(res.results);
     }, err =>{
       console.log(err);
     })
+    
+  }
+  loadCoin(){
+    this.http.get('https://api.coinmarketcap.com/v2/listings/')
+    .map(res => res.json())
+    .subscribe(res => {
+      this.coinData = res.results;
+      console.log(res.results);
+    }, err =>{
+      console.log(err);
+    })
+
   }
 
-}
+  }
+
+
+

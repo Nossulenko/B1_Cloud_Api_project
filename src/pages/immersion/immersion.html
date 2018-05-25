@@ -6,8 +6,8 @@
 -->
 <ion-header>
 
-    <ion-navbar color="primary">s
-    <ion-title>3</ion-title>
+    <ion-navbar color="primary">
+    <ion-title>REST API's test page</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -15,28 +15,31 @@
 <ion-content padding class="container">
     <ion-row>
       <ion-col>
-        <div *ngFor="let item of data">
+        <div *ngFor="let item of userData">
+          <ion-card>
           <ion-item>
             <ion-avatar item-start>
-              <img src="{{item.picture.thumbnail}}">
+              <img src="{{item.picture.large}}">
             </ion-avatar>
             <h2>{{item.name.first}} {{item.name.last}}</h2>
-            <p>{{item.dob}}</p>
+            <p>{{item.symbol}}</p>
           </ion-item>
-
+          
           <ion-card-content>
             <p>{{item.location.street}}, {{item.location.city}} 
             {{item.location.state}}.</p>
+            <p>{{item.location.postcode}}</p>
+            <p>{{item.nat}}</p>
           </ion-card-content>
 
           <ion-row>
             <ion-col>
               <button ion-button icon-left clear small>
                 <ion-icon name="ios-heart"></ion-icon>
-                <div>{{item.location.postcode}} loves</div>
               </button>
             </ion-col>
           </ion-row>
+        </ion-card>
         </div>
       </ion-col>
     </ion-row>

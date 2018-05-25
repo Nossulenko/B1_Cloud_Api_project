@@ -1,6 +1,8 @@
+import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ImmersionPage } from './immersion';
+
 
 @NgModule({
   declarations: [
@@ -8,6 +10,10 @@ import { ImmersionPage } from './immersion';
   ],
   imports: [
     IonicPageModule.forChild(ImmersionPage),
+    
   ],
+  providers: [
+    HttpModule
+  ]
 })
 export class ImmersionPageModule {}
