@@ -1,5 +1,8 @@
+import { Http, Headers, HttpModule } from '@angular/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import 'rxjs/add/operator/map'
+
 
 /**
  * Generated class for the ImmersionPage page.
@@ -12,14 +15,30 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-immersion',
   templateUrl: 'immersion.html',
+  
 })
 export class ImmersionPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  url:string;
+  data:string;
+  constructor(public http: Http, public navCtrl: NavController, public navParams: NavParams) {
 
+  }
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad ImmersionPage');
+    this.loadUser();
+  }
+  loadUser(){
+
+    this.http.get('https://randomuser.me/api/?results=50')
+    .map(res => res.json())
+    .subscribe(data => {
+      this.data = data.results;
+      console.log(data.results);
+    }, err =>{
+      console.log(err);
+    })
   }
 
 }

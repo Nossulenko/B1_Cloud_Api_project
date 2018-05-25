@@ -33,19 +33,19 @@ $toolbar-md-background:    #002137;
 
 
 input::-webkit-input-placeholder {
-  color: rgb(255, 255, 255) !important;
+  color: rgb(190, 202, 211) !important;
   }
    
   input:-moz-placeholder { /* Firefox 18- */
-  color: rgb(255, 255, 255) !important;  
+  color: rgb(190, 202, 211)!important;  
   }
    
   input::-moz-placeholder {  /* Firefox 19+ */
-  color: rgb(255, 255, 255) !important;  
+  color: rgb(190, 202, 211) !important;  
   }
    
   input:-ms-input-placeholder {  
-  color: rgb(255, 255, 255) !important;  
+  color: rgb(190, 202, 211) !important;  
   }
 
 
@@ -60,9 +60,9 @@ input::-webkit-input-placeholder {
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #00b7ff,
+  primary:    #619917,
   secondary:  rgb(38, 37, 46),
-  danger:     #f53d3d,
+  danger:     #BD2031,
   light:      #f4f4f4,
   dark:       #222
 );

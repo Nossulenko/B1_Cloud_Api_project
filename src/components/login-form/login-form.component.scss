@@ -7,8 +7,11 @@ ion-input {
     margin-top: 10px;
 }
 ion-input {
-    background-color: #3ec8fa;
-    color: white;
+    background-color: #ffff;
+    color: #619917;
+    border-color: #619917;
+    border-style: solid;
+    border-width: 1px;
 }
 
 div .inputs {
@@ -17,7 +20,7 @@ div .inputs {
     margin-top: 20%;
 }
 label{
-    color: #22caf4;
+    color: #619917;
 }
 .label1{
     margin-top: 10px;

@@ -1,16 +1,15 @@
 webpackJsonp([3],{
 
-/***/ 441:
+/***/ 491:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(506);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(461);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_service__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(514);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(502);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -21,47 +20,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var ProfilePageModule = (function () {
-    function ProfilePageModule() {
+var LoginPageModule = (function () {
+    function LoginPageModule() {
     }
-    return ProfilePageModule;
+    return LoginPageModule;
 }());
-ProfilePageModule = __decorate([
+LoginPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */]
-        ],
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_4__providers_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_2__login__["a" /* LoginPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__login__["a" /* LoginPage */]),
             __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* ComponentsModule */]
         ],
     })
-], ProfilePageModule);
+], LoginPageModule);
 
-//# sourceMappingURL=profile.module.js.map
+//# sourceMappingURL=login.module.js.map
 
 /***/ }),
 
-/***/ 461:
+/***/ 502:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_form_login_form_component__ = __webpack_require__(462);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_form_register_form_component__ = __webpack_require__(463);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__profile_form_profile_form_component__ = __webpack_require__(464);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_form_login_form_component__ = __webpack_require__(503);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_form_register_form_component__ = __webpack_require__(504);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__profile_form_profile_form_component__ = __webpack_require__(505);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_view_profile_view_component__ = __webpack_require__(506);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -77,15 +74,17 @@ ComponentsModule = __decorate([
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__login_form_login_form_component__["a" /* LoginFormComponent */],
             __WEBPACK_IMPORTED_MODULE_3__register_form_register_form_component__["a" /* RegisterFormComponent */],
-            __WEBPACK_IMPORTED_MODULE_4__profile_form_profile_form_component__["a" /* ProfileFormComponent */]
+            __WEBPACK_IMPORTED_MODULE_4__profile_form_profile_form_component__["a" /* ProfileFormComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__profile_view_profile_view_component__["a" /* ProfileViewComponent */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* IonicModule */]
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicModule */]
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__login_form_login_form_component__["a" /* LoginFormComponent */],
             __WEBPACK_IMPORTED_MODULE_3__register_form_register_form_component__["a" /* RegisterFormComponent */],
-            __WEBPACK_IMPORTED_MODULE_4__profile_form_profile_form_component__["a" /* ProfileFormComponent */]
+            __WEBPACK_IMPORTED_MODULE_4__profile_form_profile_form_component__["a" /* ProfileFormComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__profile_view_profile_view_component__["a" /* ProfileViewComponent */]
         ]
     })
 ], ComponentsModule);
@@ -94,14 +93,14 @@ ComponentsModule = __decorate([
 
 /***/ }),
 
-/***/ 462:
+/***/ 503:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginFormComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_service__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_service__ = __webpack_require__(150);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -158,7 +157,7 @@ var LoginFormComponent = (function () {
         this.loginStatus = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
     }
     LoginFormComponent.prototype.navigateToPage = function (pageName) {
-        pageName === 'TabsPage' ? this.navCtrl.setRoot(pageName) : this.navCtrl.push(pageName);
+        this.navCtrl.push(pageName);
     };
     LoginFormComponent.prototype.login = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -182,22 +181,22 @@ __decorate([
 ], LoginFormComponent.prototype, "loginStatus", void 0);
 LoginFormComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'app-login-form>',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/components/login-form/login-form.component.html"*/'<form #loginForm="ngForm" novalidate>\n<div class="inputs">\n<ion-row><ion-input \n    [(ngModel)]="account.email" \n    type="email" \n    placeholder="E-mail" \n    id="email"\n     name="email" \n     #email="ngModel" \n     required\n     pattern="[a-z0-9!#$%&\'*+/=?^_`{\}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{\}~-]+)*@(?:[a-z0-9](?:[a-z0-9]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"></ion-input>\n    </ion-row>\n    <div *ngIf="email.invalid && email.dirty">\n            <span class="global__input-error">Email addreess is not valid</span>\n            </div>\n<ion-row><ion-input \n    [(ngModel)]="account.password" \n    type="password" \n    placeholder="Password" \n    name="password" \n    #password="ngModel" \n    required \n    pattern="[a-zA-Z0-9!@#$%^&*]{6,20}$"\n    ></ion-input></ion-row>\n    <div *ngIf="password.invalid && password.dirty">\n            <span class="global__input-error">Password must be at least 6 characters long</span>\n    </div>\n</div>\n<button ion-button full text-capitalize (click)="login()" id="login" [disabled]="loginForm.invalid">Login</button>\n<label class="label1" click="navigateToPage(\'RegisterPage\')">Wachtwoord vergeten</label>\n<label class="label2">Registreer nu!</label>\n</form>\n\n\n'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/components/login-form/login-form.component.html"*/
+        selector: 'app-login-form>',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/OnlineAcademy/src/components/login-form/login-form.component.html"*/'\n<div class="container">\n<form #loginForm="ngForm" novalidate>\n<div class="inputs">\n        \n<ion-row><ion-input\n    [(ngModel)]="account.email" \n    type="email" \n    placeholder="E-mail" \n    id="email"\n     name="email" \n     #email="ngModel" \n     required\n     pattern="[a-z0-9!#$%&\'*+/=?^_`{\}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{\}~-]+)*@(?:[a-z0-9](?:[a-z0-9]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"></ion-input>\n    </ion-row>\n    <div *ngIf="email.invalid && email.dirty">\n            <span class="global__input-error">Vul een geldig email adres in aub</span>\n            </div>\n<ion-row><ion-input\n    [(ngModel)]="account.password" \n    type="password" \n    placeholder="Wachtwoord" \n    name="password" \n    #password="ngModel" \n    required \n    ></ion-input></ion-row>\n</div>\n<button ion-button full text-capitalize (click)="login()" id="login" [disabled]="loginForm.invalid">Login</button>\n<label class="label1" (click)="navigateToPage(\'ForgotPasswordPage\')">Wachtwoord vergeten</label>\n<label class="label2" (click)="navigateToPage(\'RegisterPage\')">Registreer nu!</label>\n</form>\n</div>\n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/OnlineAcademy/src/components/login-form/login-form.component.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
 ], LoginFormComponent);
 
 //# sourceMappingURL=login-form.component.js.map
 
 /***/ }),
 
-/***/ 463:
+/***/ 504:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterFormComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_auth_service__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_auth_service__ = __webpack_require__(150);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -280,7 +279,7 @@ __decorate([
 ], RegisterFormComponent.prototype, "registerStatus", void 0);
 RegisterFormComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'app-register-form',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/components/register-form/register-form.component.html"*/'<form #registerForm="ngForm" novalidate>\n            <ion-row><ion-input \n                  [(ngModel)]="account.email" \n                  type="email" \n                  placeholder="E-mail" \n                  id="email"\n                   name="email" \n                   #email="ngModel" \n                   required\n                   pattern="[a-z0-9!#$%&\'*+/=?^_`{\}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{\}~-]+)*@(?:[a-z0-9](?:[a-z0-9]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"></ion-input>\n                  </ion-row>\n                  <div *ngIf="email.invalid && email.dirty">\n                  <span class="global__input-error">Email addreess is not valid</span>\n                  </div>\n              <ion-row><ion-input \n                  [(ngModel)]="account.password" \n                  type="password" \n                  placeholder="Password" \n                  name="password" \n                  #password="ngModel" \n                  required \n                  pattern="[a-zA-Z0-9!@#$%^&*]{6,20}$"\n                  ></ion-input></ion-row>\n                  <div *ngIf="password.invalid && password.dirty">\n                  <span class="global__input-error">Password must be at least 6 characters long</span>\n                  </div>\n      <button ion-button full (click)="register()" [disabled]="registerForm.invalid">Register</button>\n</form>'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/components/register-form/register-form.component.html"*/
+        selector: 'app-register-form',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/OnlineAcademy/src/components/register-form/register-form.component.html"*/'<form #registerForm="ngForm" novalidate>\n            <ion-row><ion-input \n                  [(ngModel)]="account.email" \n                  type="email" \n                  placeholder="E-mail" \n                  id="email"\n                   name="email" \n                   #email="ngModel" \n                   required\n                   pattern="[a-z0-9!#$%&\'*+/=?^_`{\}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{\}~-]+)*@(?:[a-z0-9](?:[a-z0-9]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"></ion-input>\n                  </ion-row>\n                  <div *ngIf="email.invalid && email.dirty">\n                  <span class="global__input-error">Email addreess is not valid</span>\n                  </div>\n              <ion-row><ion-input \n                  [(ngModel)]="account.password" \n                  type="password" \n                  placeholder="Password" \n                  name="password" \n                  #password="ngModel" \n                  required \n                  pattern="[a-zA-Z0-9!@#$%^&*]{6,20}$"\n                  ></ion-input></ion-row>\n                  <div *ngIf="password.invalid && password.dirty">\n                  <span class="global__input-error">Password must be at least 6 characters long</span>\n                  </div>\n      <button ion-button full (click)="register()" [disabled]="registerForm.invalid">Register</button>\n</form>'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/OnlineAcademy/src/components/register-form/register-form.component.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_auth_service__["a" /* AuthService */]])
 ], RegisterFormComponent);
@@ -289,15 +288,15 @@ RegisterFormComponent = __decorate([
 
 /***/ }),
 
-/***/ 464:
+/***/ 505:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileFormComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_service__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_service__ = __webpack_require__(279);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular_navigation_nav_controller__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_service__ = __webpack_require__(301);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_service__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular_navigation_nav_controller__ = __webpack_require__(29);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -353,14 +352,11 @@ var ProfileFormComponent = (function () {
         this.data = data;
         this.navCtrl = navCtrl;
         this.profile = {};
+        this.saveProfileResult = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
         this.authenticatedUser$ = this.auth.getAuthenticatedUser().subscribe(function (user) {
             _this.authenticatedUser = user;
         });
     }
-    ProfileFormComponent.prototype.signOut = function () {
-        this.auth.signOut();
-        this.navCtrl.setRoot('WelcomePage');
-    };
     ProfileFormComponent.prototype.saveProfile = function () {
         return __awaiter(this, void 0, void 0, function () {
             var result;
@@ -372,7 +368,7 @@ var ProfileFormComponent = (function () {
                         return [4 /*yield*/, this.data.saveProfile(this.authenticatedUser, this.profile)];
                     case 1:
                         result = _a.sent();
-                        console.log(result);
+                        this.saveProfileResult.emit(result);
                         _a.label = 2;
                     case 2: return [2 /*return*/];
                 }
@@ -384,9 +380,13 @@ var ProfileFormComponent = (function () {
     };
     return ProfileFormComponent;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Output */])(),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
+], ProfileFormComponent.prototype, "saveProfileResult", void 0);
 ProfileFormComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'app-profile-form',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/components/profile-form/profile-form.component.html"*/'<ion-card>\n<ion-card-content>\n<ion-item>\n<ion-label>Voornaam</ion-label>\n<ion-input type="text" [(ngModel)]="profile.firstName"></ion-input>  \n</ion-item> \n<ion-item>\n    <ion-label>Achtenaam</ion-label>\n    <ion-input type="text" [(ngModel)]="profile.lastName"></ion-input>  \n</ion-item> \n<ion-item>\n    <ion-label>Geboortedatum</ion-label>\n    <ion-datetime displayFormat= "DD/MM/YYYY" [(ngModel)]="profile.dateOfBirth"></ion-datetime>\n</ion-item> \n</ion-card-content>  \n</ion-card>\n<button ion-button (click)="saveProfile()">Opslaan</button>\n<button ion-button block (click)="signOut()">Uitloggen</button>'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/components/profile-form/profile-form.component.html"*/
+        selector: 'app-profile-form',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/OnlineAcademy/src/components/profile-form/profile-form.component.html"*/'<ion-card>\n<ion-card-content>\n<ion-item>\n<ion-label>Voornaam</ion-label>\n<ion-input type="text" [(ngModel)]="profile.firstName"></ion-input>  \n</ion-item> \n<ion-item>\n    <ion-label>Achtenaam</ion-label>\n    <ion-input type="text" [(ngModel)]="profile.lastName"></ion-input>  \n</ion-item> \n<ion-item>\n    <ion-label>Geboortedatum</ion-label>\n    <ion-datetime displayFormat= "DD/MM/YYYY" [(ngModel)]="profile.dateOfBirth"></ion-datetime>\n</ion-item> \n</ion-card-content>  \n</ion-card>\n<button ion-button (click)="saveProfile()">Opslaan</button>\n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/OnlineAcademy/src/components/profile-form/profile-form.component.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1__providers_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular_navigation_nav_controller__["a" /* NavController */]])
 ], ProfileFormComponent);
@@ -399,10 +399,11 @@ ProfileFormComponent = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileViewComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_service__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_service__ = __webpack_require__(301);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_service__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(85);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -415,28 +416,131 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the ProfilePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ProfilePage = (function () {
-    function ProfilePage(navCtrl, navParams, auth) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.auth = auth;
-    }
-    return ProfilePage;
-}());
-ProfilePage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/pages/profile/profile.html"*/'<ion-header>\n\n    <ion-navbar color="secondary">\n    <ion-title>Online Academy</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<app-profile-form></app-profile-form>\n</ion-content>\n'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/pages/profile/profile.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_service__["a" /* AuthService */]])
-], ProfilePage);
 
-//# sourceMappingURL=profile.js.map
+
+/**
+ * Generated class for the ProfileViewComponent component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
+ */
+var ProfileViewComponent = (function () {
+    function ProfileViewComponent(data, auth, app, loading) {
+        this.data = data;
+        this.auth = auth;
+        this.app = app;
+        this.loading = loading;
+        this.loader = this.loading.create({
+            content: 'Profiel laden...'
+        });
+    }
+    ProfileViewComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.loader.present();
+        this.auth.getAuthenticatedUser().subscribe(function (user) {
+            _this.data.getProfile(user)
+                .valueChanges()
+                .subscribe(function (profile) {
+                _this.userProfile = profile;
+                _this.loader.dismiss();
+            });
+        });
+    };
+    ProfileViewComponent.prototype.signOut = function () {
+        this.auth.signOut();
+        this.app.getRootNav().setRoot('WelcomePage');
+    };
+    return ProfileViewComponent;
+}());
+ProfileViewComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'app-profile-view',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/OnlineAcademy/src/components/profile-view/profile-view.component.html"*/'<div class="profile-view__image-container">\n<img class="profile-view__image" src="assets/img/profile-placeholder.png">\n</div>\n\n<div *ngIf="userProfile">\n<ion-card>\n  <ion-card-content>\n      <ion-item>\n          <ion-label floating>Email</ion-label>\n          <ion-input [value]="userProfile.email" [readonly]=true></ion-input>\n        </ion-item>\n\n    <ion-item>\n      <ion-label floating>Voornaam</ion-label>\n      <ion-input [value]="userProfile.firstName" [readonly]=true></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Achternaam</ion-label>\n      <ion-input [value]="userProfile.lastName" [readonly]=true></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-label floating>Geboortedatum</ion-label>\n        <ion-input [value]="userProfile.dateOfBirth" [readonly]=true></ion-input>\n      </ion-item>\n  </ion-card-content>\n</ion-card>\n\n</div>\n\n<button padding block ion-button text-center color="danger" (click)="signOut()">Uitloggen</button>'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/OnlineAcademy/src/components/profile-view/profile-view.component.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* App */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* LoadingController */]])
+], ProfileViewComponent);
+
+//# sourceMappingURL=profile-view.component.js.map
+
+/***/ }),
+
+/***/ 514:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_data_service__ = __webpack_require__(301);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var LoginPage = (function () {
+    function LoginPage(afAuth, navCtrl, toast, data) {
+        this.afAuth = afAuth;
+        this.navCtrl = navCtrl;
+        this.toast = toast;
+        this.data = data;
+        this.account = {};
+        this.loginStatus = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+    }
+    LoginPage.prototype.ngOnDestroy = function () {
+        if (this.profile$) {
+            this.profile$.unsubscribe();
+        }
+    };
+    LoginPage.prototype.login = function (event) {
+        var _this = this;
+        if (!event.error) {
+            this.toast.create({
+                message: "Welcome to Online Academy, " + event.result.email,
+                duration: 2000,
+                position: 'top',
+            }).present();
+            // Retrieving the AngularFireObject and use a function that returns an Observable 
+            this.profile$ = this.data.getProfile(event.result)
+                .snapshotChanges() // return an Observable
+                .subscribe(function (action) {
+                action.payload.val() ? _this.navCtrl.setRoot('TabsPage') : _this.navCtrl.setRoot('ProfilePage');
+            });
+        }
+        else {
+            if (event.error.message = "There is no user record corresponding to this identifier. The user may have been delted") {
+                this.toast.create({
+                    message: "Verkeerde combinatie email/wachtwoord of gebruiker bestaat niet.",
+                    duration: 2000
+                }).present();
+            }
+            console.log(event);
+        }
+    };
+    LoginPage.prototype.navigateToPage = function (pageName) {
+        pageName === 'TabsPage' ? this.navCtrl.setRoot(pageName) : this.navCtrl.push(pageName);
+    };
+    return LoginPage;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Output */])(),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
+], LoginPage.prototype, "loginStatus", void 0);
+LoginPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-login',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/OnlineAcademy/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="primary">\n    <ion-title>Login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding class="container">\n\n<img src="assets/imgs/boomB.png" alt="logo" class="logo">\n<app-login-form (loginStatus)="login($event)"></app-login-form>\n\n</ion-content>'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/OnlineAcademy/src/pages/login/login.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_3__providers_data_service__["a" /* DataService */]])
+], LoginPage);
+
+//# sourceMappingURL=login.js.map
 
 /***/ })
 

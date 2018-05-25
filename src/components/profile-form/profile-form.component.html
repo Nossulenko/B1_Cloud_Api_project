@@ -1,17 +1,17 @@
 <ion-card>
 <ion-card-content>
 <ion-item>
-<ion-label>Voornaam</ion-label>
+<ion-label>Firstname</ion-label>
 <ion-input type="text" [(ngModel)]="profile.firstName"></ion-input>  
 </ion-item> 
 <ion-item>
-    <ion-label>Achtenaam</ion-label>
+    <ion-label>Lastame</ion-label>
     <ion-input type="text" [(ngModel)]="profile.lastName"></ion-input>  
 </ion-item> 
 <ion-item>
-    <ion-label>Geboortedatum</ion-label>
+    <ion-label>Date of birth</ion-label>
     <ion-datetime displayFormat= "DD/MM/YYYY" [(ngModel)]="profile.dateOfBirth"></ion-datetime>
 </ion-item> 
 </ion-card-content>  
 </ion-card>
-<button ion-button (click)="saveProfile()">Opslaan</button>
+<button ion-button (click)="saveProfile()">Save</button>

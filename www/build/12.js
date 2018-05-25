@@ -1,14 +1,14 @@
 webpackJsonp([12],{
 
-/***/ 437:
+/***/ 489:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExplorePageModule", function() { return ExplorePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__explore__ = __webpack_require__(503);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(512);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ExplorePageModule = (function () {
-    function ExplorePageModule() {
+var HomePageModule = (function () {
+    function HomePageModule() {
     }
-    return ExplorePageModule;
+    return HomePageModule;
 }());
-ExplorePageModule = __decorate([
+HomePageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__explore__["a" /* ExplorePage */],
+            __WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__explore__["a" /* ExplorePage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */]),
         ],
     })
-], ExplorePageModule);
+], HomePageModule);
 
-//# sourceMappingURL=explore.module.js.map
+//# sourceMappingURL=home.module.js.map
 
 /***/ }),
 
-/***/ 503:
+/***/ 512:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExplorePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,35 +56,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-//import { ViewChild } from '@angular/core';
-
-
-var ExplorePage = (function () {
-    function ExplorePage(navCtrl, navParams) {
+/**
+ * Generated class for the HomePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var HomePage = (function () {
+    function HomePage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    ExplorePage.prototype.goToSlide = function () {
-        this.slides.slideTo(2, 500);
+    HomePage.prototype.navigateToPage = function (pageName) {
+        this.navCtrl.push(pageName);
     };
-    ExplorePage.prototype.slideChanged = function () {
-        var currentIndex = this.slides.getActiveIndex();
-        console.log('Current index is', currentIndex);
-    };
-    return ExplorePage;
+    return HomePage;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Slides */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Slides */])
-], ExplorePage.prototype, "slides", void 0);
-ExplorePage = __decorate([
+HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-explore',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/pages/explore/explore.html"*/'<!--\n  Generated template for the ExplorePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-header><ion-navbar>\n<ion-title>Explore</ion-title>\n</ion-navbar></ion-header>\n<ion-content >\n  <ion-slides>\n    <ion-slide tappable ><img src="assets/img/5W.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/MVT.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/BYB.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/pjb.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/GVSO.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/100.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/iv.jpg"></ion-slide>\n  </ion-slides>\n\n</ion-content>\n'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/pages/explore/explore.html"*/,
+        selector: 'page-home',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/home/home.html"*/'<!--\n  Generated template for the HomePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="primary">\n    <ion-title>Kaizen Projects</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="container">\n  <div class="image-container">\n    <img src="assets/img/explore.jpg" (click)="navigateToPage(\'ExplorePage\')"alt="explore">\n    <div class="centered">Wie zijn wij?</div>\n    <div clas="right"><img src="assets/img/arrow.png"></div>\n  </div>\n  <div class="image-container">\n    <img src="assets/img/training_courses.png" (click)="navigateToPage(\'TrainingCoursesPage\')"alt="training courses">\n    <div class="centered">Onze realisaties</div>\n  </div>\n  <div class="image-container">\n    <img src="assets/img/immersion.jpg" (click)="navigateToPage(\'ImmersionPage\')" alt="immersion">\n    <div class="centered">Onze diensten</div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/home/home.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
-], ExplorePage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+], HomePage);
 
-//# sourceMappingURL=explore.js.map
+//# sourceMappingURL=home.js.map
 
 /***/ })
 

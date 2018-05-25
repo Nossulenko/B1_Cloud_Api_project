@@ -1,15 +1,14 @@
 webpackJsonp([7],{
 
-/***/ 448:
+/***/ 498:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrainingCoursesPageModule", function() { return TrainingCoursesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShowQuotesPageModule", function() { return ShowQuotesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__training_courses__ = __webpack_require__(514);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__ = __webpack_require__(283);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__show_quotes__ = __webpack_require__(521);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,38 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var TrainingCoursesPageModule = (function () {
-    function TrainingCoursesPageModule() {
+var ShowQuotesPageModule = (function () {
+    function ShowQuotesPageModule() {
     }
-    return TrainingCoursesPageModule;
+    return ShowQuotesPageModule;
 }());
-TrainingCoursesPageModule = __decorate([
+ShowQuotesPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__training_courses__["a" /* TrainingCoursesPage */],
-        ],
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */],
+            __WEBPACK_IMPORTED_MODULE_2__show_quotes__["a" /* ShowQuotesPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__training_courses__["a" /* TrainingCoursesPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__show_quotes__["a" /* ShowQuotesPage */]),
         ],
     })
-], TrainingCoursesPageModule);
+], ShowQuotesPageModule);
 
-//# sourceMappingURL=training-courses.module.js.map
+//# sourceMappingURL=show-quotes.module.js.map
 
 /***/ }),
 
-/***/ 514:
+/***/ 521:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrainingCoursesPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShowQuotesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__ = __webpack_require__(283);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_social_sharing__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2_database__ = __webpack_require__(87);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -63,34 +61,50 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the TrainingCoursesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var TrainingCoursesPage = (function () {
-    function TrainingCoursesPage(navCtrl, navParams, iab) {
+
+
+
+var ShowQuotesPage = (function () {
+    function ShowQuotesPage(af, navCtrl, navParams, afdb, soc, loading) {
+        this.af = af;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.iab = iab;
+        this.afdb = afdb;
+        this.soc = soc;
+        this.loading = loading;
+        //Reference to firebase quotes
+        this.QuotesRef = __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.database().ref('/quotes/');
+        //Array to hold quotes
+        this.Quotes = [];
+        this.loader = this.loading.create({
+            content: 'Quotes laden...'
+        });
     }
-    TrainingCoursesPage.prototype.openWebpage = function (url) {
-        var options = {
-            zoom: 'no'
-        };
-        var browser = this.iab.create(url, '_self', options);
+    ShowQuotesPage.prototype.navigateToPage = function (pageName) {
+        this.navCtrl.push(pageName);
     };
-    return TrainingCoursesPage;
+    ShowQuotesPage.prototype.ionViewWillLoad = function () {
+        var _this = this;
+        this.loader.present();
+        this.QuotesRef.on('value', function (quoteSnapshot) {
+            _this.Quotes = [];
+            quoteSnapshot.forEach(function (quoteSnap) {
+                _this.Quotes.push(quoteSnap.val());
+                return false;
+            });
+        });
+        this.loader.dismiss();
+    };
+    return ShowQuotesPage;
 }());
-TrainingCoursesPage = __decorate([
+ShowQuotesPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-training-courses',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/pages/training-courses/training-courses.html"*/'<!--\n  Generated template for the TrainingCoursesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>TRAINING COURSES</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <img src="assets/img/training_courses1.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=2\')">\n  <img src="assets/img/training_courses2.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=3\')">\n  <img src="assets/img/training_courses3.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=5\')">\n  <img src="assets/img/training_courses4.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=1\')">\n  <img src="assets/img/training_courses5.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=4\')">\n  <img src="assets/img/training_courses6.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=6\')">\n</ion-content>\n'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/pages/training-courses/training-courses.html"*/,
+        selector: 'page-show-quotes',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/show-quotes/show-quotes.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n    <ion-title>Online Academy</ion-title>\n    <ion-buttons end>\n        <button (click)="navigateToPage(\'QuotePage\')" ion-button>\n            <ion-icon name="add"></ion-icon>\n        </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="container">\n  <ion-list *ngIf="Quotes !== null">\n    <ion-item  *ngFor="let quotes of Quotes" class="dark">\n\n      <div class="w3-panel w3-leftbar w3-light-grey dark"  padding>\n          {{quotes.Day}}/{{quotes.Month}}/{{quotes.Year}}\n          <p class="w3-xlarge w3-serif">\n            <i text-wrap>"{{quotes.Quote}}"</i>\n          <p>{{quotes.Auteur}}</p>\n          <br>\n          \n        </div>\n      </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/show-quotes/show-quotes.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__["a" /* InAppBrowser */]])
-], TrainingCoursesPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_angularfire2_database__["a" /* AngularFireDatabase */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4_angularfire2_database__["a" /* AngularFireDatabase */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_social_sharing__["a" /* SocialSharing */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
+], ShowQuotesPage);
 
-//# sourceMappingURL=training-courses.js.map
+//# sourceMappingURL=show-quotes.js.map
 
 /***/ })
 

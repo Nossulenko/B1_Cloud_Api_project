@@ -81,6 +81,28 @@ module.exports = [
         "clobbers": [
             "YoutubeVideoPlayer"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-firebase/www/firebase-browser.js",
+        "id": "cordova-plugin-firebase.FirebasePlugin",
+        "pluginId": "cordova-plugin-firebase",
+        "clobbers": [
+            "FirebasePlugin"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+        "id": "cordova-plugin-x-socialsharing.SocialSharing",
+        "pluginId": "cordova-plugin-x-socialsharing",
+        "clobbers": [
+            "window.plugins.socialsharing"
+        ]
+    },
+    {
+        "file": "plugins/es6-promise-plugin/www/promise.js",
+        "id": "es6-promise-plugin.Promise",
+        "pluginId": "es6-promise-plugin",
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -94,7 +116,10 @@ module.exports.metadata =
     "cordova-plugin-splashscreen": "4.1.0",
     "cordova-plugin-ionic-webview": "1.1.16",
     "cordova-plugin-statusbar": "2.3.0",
-    "cordova-plugin-youtube-video-player": "1.0.6"
+    "cordova-plugin-youtube-video-player": "1.0.6",
+    "cordova-plugin-firebase": "0.1.24",
+    "cordova-plugin-x-socialsharing": "5.2.1",
+    "es6-promise-plugin": "4.1.0"
 }
 // BOTTOM OF METADATA
 });

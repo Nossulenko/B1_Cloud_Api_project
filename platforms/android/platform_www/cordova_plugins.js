@@ -65,6 +65,20 @@ module.exports = [
     "clobbers": [
       "FirebasePlugin"
     ]
+  },
+  {
+    "id": "cordova-plugin-x-socialsharing.SocialSharing",
+    "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+    "pluginId": "cordova-plugin-x-socialsharing",
+    "clobbers": [
+      "window.plugins.socialsharing"
+    ]
+  },
+  {
+    "id": "es6-promise-plugin.Promise",
+    "file": "plugins/es6-promise-plugin/www/promise.js",
+    "pluginId": "es6-promise-plugin",
+    "runs": true
   }
 ];
 module.exports.metadata = 
@@ -79,7 +93,9 @@ module.exports.metadata =
   "cordova-plugin-whitelist": "1.3.3",
   "ionic-plugin-keyboard": "2.2.1",
   "cordova-plugin-youtube-video-player": "1.0.6",
-  "cordova-plugin-firebase": "0.1.24"
+  "cordova-plugin-firebase": "0.1.24",
+  "cordova-plugin-x-socialsharing": "5.2.1",
+  "es6-promise-plugin": "4.1.0"
 };
 // BOTTOM OF METADATA
 });

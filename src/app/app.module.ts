@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -18,6 +19,7 @@ import {SocialSharing} from '@ionic-native/social-sharing'
 import { NotesService } from '../providers/notes.service';
 import { ToastService } from '../providers/toast.service';
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -30,7 +32,8 @@ import { ToastService } from '../providers/toast.service';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -48,7 +51,8 @@ import { ToastService } from '../providers/toast.service';
     FormsModule,
     SocialSharing,
     NotesService,
-    ToastService
+    ToastService,
+   
     
   ]
 })

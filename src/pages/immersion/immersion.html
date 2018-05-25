@@ -6,13 +6,39 @@
 -->
 <ion-header>
 
-    <ion-navbar color="primary">
-    <ion-title>IMMERSION</ion-title>
+    <ion-navbar color="primary">s
+    <ion-title>3</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding class="container">
+    <ion-row>
+      <ion-col>
+        <div *ngFor="let item of data">
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="{{item.picture.thumbnail}}">
+            </ion-avatar>
+            <h2>{{item.name.first}} {{item.name.last}}</h2>
+            <p>{{item.dob}}</p>
+          </ion-item>
+
+          <ion-card-content>
+            <p>{{item.location.street}}, {{item.location.city}} 
+            {{item.location.state}}.</p>
+          </ion-card-content>
+
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon name="ios-heart"></ion-icon>
+                <div>{{item.location.postcode}} loves</div>
+              </button>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
 
 </ion-content>

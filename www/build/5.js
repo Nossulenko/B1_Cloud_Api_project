@@ -1,14 +1,15 @@
 webpackJsonp([5],{
 
-/***/ 439:
+/***/ 500:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Home2PageModule", function() { return Home2PageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrainingCoursesPageModule", function() { return TrainingCoursesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home2__ = __webpack_require__(505);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__training_courses__ = __webpack_require__(523);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__ = __webpack_require__(305);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +19,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var Home2PageModule = (function () {
-    function Home2PageModule() {
+
+var TrainingCoursesPageModule = (function () {
+    function TrainingCoursesPageModule() {
     }
-    return Home2PageModule;
+    return TrainingCoursesPageModule;
 }());
-Home2PageModule = __decorate([
+TrainingCoursesPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__home2__["a" /* Home2Page */],
+            __WEBPACK_IMPORTED_MODULE_2__training_courses__["a" /* TrainingCoursesPage */],
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home2__["a" /* Home2Page */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__training_courses__["a" /* TrainingCoursesPage */]),
         ],
     })
-], Home2PageModule);
+], TrainingCoursesPageModule);
 
-//# sourceMappingURL=home2.module.js.map
+//# sourceMappingURL=training-courses.module.js.map
 
 /***/ }),
 
-/***/ 505:
+/***/ 523:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Home2Page; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrainingCoursesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_notes_service__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__detail_detail__ = __webpack_require__(476);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__ = __webpack_require__(305);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,35 +63,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var Home2Page = (function () {
-    function Home2Page(navCtrl, notesService) {
+/**
+ * Generated class for the TrainingCoursesPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var TrainingCoursesPage = (function () {
+    function TrainingCoursesPage(navCtrl, navParams, iab) {
         this.navCtrl = navCtrl;
-        this.notesService = notesService;
-        this.notes = [];
-        this.notes = notesService.getNotes();
+        this.navParams = navParams;
+        this.iab = iab;
     }
-    Home2Page.prototype.goToDetail = function (id) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__detail_detail__["a" /* DetailPage */], { id: id });
+    TrainingCoursesPage.prototype.openWebpage = function (url) {
+        var options = {
+            zoom: 'no'
+        };
+        var browser = this.iab.create(url, '_self', options);
     };
-    Home2Page.prototype.createNote = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__detail_detail__["a" /* DetailPage */], { id: 0 });
-    };
-    return Home2Page;
+    return TrainingCoursesPage;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])('myNav'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object)
-], Home2Page.prototype, "nav", void 0);
-Home2Page = __decorate([
+TrainingCoursesPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home2',template:/*ion-inline-start:"/Users/NN/Desktop/OnlineAcademy/src/pages/home2/home2.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            Mijn MiR Journal\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-list>\n        <button ion-item *ngFor="let note of notes" (click)="goToDetail(note.id)">\n      {{ note.title }}\n    </button>\n    </ion-list>\n    <div padding>\n        <button ion-button block (click)="createNote()">Nieuwe notitie maken</button>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/NN/Desktop/OnlineAcademy/src/pages/home2/home2.html"*/
+        selector: 'page-training-courses',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/training-courses/training-courses.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n    <ion-title></ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="container">\n  <img src="assets/img/training_courses1.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=2\')">\n  <img src="assets/img/training_courses2.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=3\')">\n  <img src="assets/img/training_courses3.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=5\')">\n  <img src="assets/img/training_courses4.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=1\')">\n  <img src="assets/img/training_courses5.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=4\')">\n  <img src="assets/img/training_courses6.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=6\')">\n</ion-content>\n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/training-courses/training-courses.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_notes_service__["a" /* NotesService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_notes_service__["a" /* NotesService */]) === "function" && _c || Object])
-], Home2Page);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__["a" /* InAppBrowser */]])
+], TrainingCoursesPage);
 
-var _a, _b, _c;
-//# sourceMappingURL=home2.js.map
+//# sourceMappingURL=training-courses.js.map
 
 /***/ })
 

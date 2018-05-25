@@ -1,0 +1,86 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-videoplayer@^0.1.4",
+        "scope": null,
+        "escapedName": "cordova-plugin-videoplayer",
+        "name": "cordova-plugin-videoplayer",
+        "rawSpec": "^0.1.4",
+        "spec": ">=0.1.4 <0.2.0",
+        "type": "range"
+      },
+      "/Users/nikolainossulenko/OnlineAcademy"
+    ]
+  ],
+  "_from": "cordova-plugin-videoplayer@>=0.1.4 <0.2.0",
+  "_id": "cordova-plugin-videoplayer@0.1.4",
+  "_inCache": true,
+  "_location": "/cordova-plugin-videoplayer",
+  "_nodeVersion": "0.12.7",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-videoplayer-0.1.4.tgz_1459249303073_0.6650344459339976"
+  },
+  "_npmUser": {
+    "name": "phi",
+    "email": "phi1618jp@gmail.com"
+  },
+  "_npmVersion": "2.11.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-videoplayer@^0.1.4",
+    "scope": null,
+    "escapedName": "cordova-plugin-videoplayer",
+    "name": "cordova-plugin-videoplayer",
+    "rawSpec": "^0.1.4",
+    "spec": ">=0.1.4 <0.2.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-videoplayer/-/cordova-plugin-videoplayer-0.1.4.tgz",
+  "_shasum": "97ca26e50416be2de685822f874873b443aa6080",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-videoplayer@^0.1.4",
+  "_where": "/Users/nikolainossulenko/OnlineAcademy",
+  "author": {
+    "name": "phi"
+  },
+  "bugs": {
+    "url": "https://github.com/phi-jp/cordova-plugin-videoplayer/issues"
+  },
+  "dependencies": {},
+  "description": "cordova-plugin-videoplayer",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "97ca26e50416be2de685822f874873b443aa6080",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-videoplayer/-/cordova-plugin-videoplayer-0.1.4.tgz"
+  },
+  "gitHead": "b3f2af43bd45fb3833a5c0b33a8f2b3977e0c8b3",
+  "homepage": "https://github.com/phi-jp/cordova-plugin-videoplayer#readme",
+  "keywords": [
+    "cordova"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "phi",
+      "email": "phi1618jp@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-videoplayer",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phi-jp/cordova-plugin-videoplayer.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.4"
+}

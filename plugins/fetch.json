@@ -74,7 +74,7 @@
   "cordova-plugin-x-socialsharing": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-x-socialsharing@^5.2.1"
+      "id": "cordova-plugin-x-socialsharing"
     },
     "is_top_level": true,
     "variables": {}
@@ -85,6 +85,14 @@
       "id": "es6-promise-plugin@4.1.0"
     },
     "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-videoplayer": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/moust/cordova-plugin-videoplayer.git"
+    },
+    "is_top_level": true,
     "variables": {}
   }
 }
