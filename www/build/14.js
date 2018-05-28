@@ -1,14 +1,14 @@
 webpackJsonp([14],{
 
-/***/ 489:
+/***/ 488:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExplorePageModule", function() { return ExplorePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditNotePageModule", function() { return EditNotePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__explore__ = __webpack_require__(513);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_note__ = __webpack_require__(511);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ExplorePageModule = (function () {
-    function ExplorePageModule() {
+var EditNotePageModule = (function () {
+    function EditNotePageModule() {
     }
-    return ExplorePageModule;
+    return EditNotePageModule;
 }());
-ExplorePageModule = __decorate([
+EditNotePageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__explore__["a" /* ExplorePage */],
+            __WEBPACK_IMPORTED_MODULE_2__edit_note__["a" /* EditNotePage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__explore__["a" /* ExplorePage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__edit_note__["a" /* EditNotePage */]),
         ],
     })
-], ExplorePageModule);
+], EditNotePageModule);
 
-//# sourceMappingURL=explore.module.js.map
+//# sourceMappingURL=edit-note.module.js.map
 
 /***/ }),
 
-/***/ 513:
+/***/ 511:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExplorePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditNotePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_notes_service__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_toast_service__ = __webpack_require__(305);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,35 +58,42 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-//import { ViewChild } from '@angular/core';
 
 
-var ExplorePage = (function () {
-    function ExplorePage(navCtrl, navParams) {
+var EditNotePage = (function () {
+    function EditNotePage(navCtrl, toast, navParams, notesservice) {
         this.navCtrl = navCtrl;
+        this.toast = toast;
         this.navParams = navParams;
+        this.notesservice = notesservice;
+        this.note = this.navParams.get('note');
     }
-    ExplorePage.prototype.goToSlide = function () {
-        this.slides.slideTo(2, 500);
+    EditNotePage.prototype.ionViewDidLoad = function () {
     };
-    ExplorePage.prototype.slideChanged = function () {
-        var currentIndex = this.slides.getActiveIndex();
-        console.log('Current index is', currentIndex);
+    EditNotePage.prototype.saveNote = function (note) {
+        var _this = this;
+        this.notesservice.editNote(note).then(function () {
+            _this.toast.show("Notitie opgeslagen");
+            _this.navCtrl.setRoot('Home2Page');
+        });
     };
-    return ExplorePage;
+    EditNotePage.prototype.removeNote = function (note) {
+        var _this = this;
+        this.notesservice.removeNote(note).then(function () {
+            _this.toast.show("Notitie verwijderd");
+            _this.navCtrl.setRoot('Home2Page');
+        });
+    };
+    return EditNotePage;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Slides */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Slides */])
-], ExplorePage.prototype, "slides", void 0);
-ExplorePage = __decorate([
+EditNotePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-explore',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/explore/explore.html"*/'<!--\n  Generated template for the ExplorePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n<ion-navbar color="primary">\n<ion-title>1</ion-title>\n</ion-navbar>\n</ion-header>\n<ion-content class="container">\n  <ion-slides>\n    <ion-slide tappable ><img src="assets/img/5W.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/MVT.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/BYB.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/pjb.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/GVSO.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/100.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/iv.jpg"></ion-slide>\n  </ion-slides>\n\n</ion-content>\n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/explore/explore.html"*/,
+        selector: 'page-edit-note',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/edit-note/edit-note.html"*/'<!--\n  Generated template for the EditNotePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="primary">\n    <ion-title>{{note?.title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding class="container">\n    <ion-item>\n        <ion-input type="text" [(ngModel)]="note.title" placeholder="Titel">\n          \n        </ion-input>\n        </ion-item>\n        <ion-item>\n        <ion-textarea type="text"[(ngModel)]="note.description" placeholder="Beschrijving">\n          \n        </ion-textarea>\n        </ion-item>\n        \n        <button ion-button block clear (click)="saveNote(note)">Opslaan</button>\n        <button ion-button block clear color="danger" (click)="removeNote(note)"> \n            Verwijderen\n        </button>\n      </ion-content> \n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/edit-note/edit-note.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-], ExplorePage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_toast_service__["a" /* ToastService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_notes_service__["a" /* NotesService */]])
+], EditNotePage);
 
-//# sourceMappingURL=explore.js.map
+//# sourceMappingURL=edit-note.js.map
 
 /***/ })
 

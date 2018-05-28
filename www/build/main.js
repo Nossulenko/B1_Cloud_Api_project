@@ -1,4 +1,4 @@
-webpackJsonp([19],{
+webpackJsonp([18],{
 
 /***/ 150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -139,58 +139,54 @@ webpackEmptyAsyncContext.id = 161;
 var map = {
 	"../pages/add-note/add-note.module": [
 		485,
-		18
+		17
 	],
 	"../pages/agenda/agenda.module": [
 		486,
-		17
+		16
 	],
 	"../pages/coins/coins.module": [
 		487,
-		16
+		15
 	],
 	"../pages/edit-note/edit-note.module": [
 		488,
-		15
+		14
 	],
 	"../pages/explore/explore.module": [
 		489,
-		14
-	],
-	"../pages/forgot-password/forgot-password.module": [
-		491,
 		13
 	],
-	"../pages/home/home.module": [
+	"../pages/forgot-password/forgot-password.module": [
 		490,
 		12
 	],
+	"../pages/home/home.module": [
+		491,
+		11
+	],
 	"../pages/home2/home2.module": [
 		492,
-		11
+		10
 	],
 	"../pages/immersion/immersion.module": [
 		493,
-		10
+		9
 	],
 	"../pages/login/login.module": [
 		494,
 		3
 	],
-	"../pages/more/more.module": [
-		495,
-		9
-	],
 	"../pages/profile-view/profile-view.module": [
-		496,
+		495,
 		2
 	],
 	"../pages/profile/profile.module": [
-		497,
+		496,
 		1
 	],
 	"../pages/quote/quote.module": [
-		499,
+		497,
 		8
 	],
 	"../pages/register/register.module": [
@@ -198,7 +194,7 @@ var map = {
 		0
 	],
 	"../pages/show-quotes/show-quotes.module": [
-		501,
+		499,
 		7
 	],
 	"../pages/tabs/tabs.module": [
@@ -206,7 +202,7 @@ var map = {
 		6
 	],
 	"../pages/training-courses/training-courses.module": [
-		503,
+		501,
 		5
 	],
 	"../pages/welcome/welcome.module": [
@@ -506,20 +502,19 @@ AppModule = __decorate([
                     { loadChildren: '../pages/coins/coins.module#CoinsPageModule', name: 'CoinsPage', segment: 'coins', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/edit-note/edit-note.module#EditNotePageModule', name: 'EditNotePage', segment: 'edit-note', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/explore/explore.module#ExplorePageModule', name: 'ExplorePage', segment: 'explore', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/forgot-password/forgot-password.module#ForgotPasswordPageModule', name: 'ForgotPasswordPage', segment: 'forgot-password', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/home2/home2.module#Home2PageModule', name: 'Home2Page', segment: 'home2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/immersion/immersion.module#ImmersionPageModule', name: 'ImmersionPage', segment: 'immersion', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/more/more.module#MorePageModule', name: 'MorePage', segment: 'more', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/profile-view/profile-view.module#ProfileViewPageModule', name: 'ProfileViewPage', segment: 'profile-view', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/quote/quote.module#QuotePageModule', name: 'QuotePage', segment: 'quote', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/show-quotes/show-quotes.module#ShowQuotesPageModule', name: 'ShowQuotesPage', segment: 'show-quotes', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/training-courses/training-courses.module#TrainingCoursesPageModule', name: 'TrainingCoursesPage', segment: 'training-courses', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/training-courses/training-courses.module#TrainingCoursesPageModule', name: 'TrainingCoursesPage', segment: 'training-courses', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                 ]
             }),
             __WEBPACK_IMPORTED_MODULE_8_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_9__app_firebase_config__["a" /* FIREBASE_CONFIG */]),
