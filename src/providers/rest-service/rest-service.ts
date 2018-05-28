@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers, HttpModule } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -10,9 +10,20 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class RestServiceProvider {
-
+  coinData:any;
   constructor(public http: Http) {
     console.log('Hello RestServiceProvider Provider');
   }
 
+  loadCoin(){
+    this.http.get('https://api.coinmarketcap.com/v2/listings/')
+    .map(res => res.json())
+    .subscribe(res => {
+      this.coinData = res.data;
+      //console.log(res.data);
+    }, err =>{
+      console.log(err);
+    })
+
+  }
 }
