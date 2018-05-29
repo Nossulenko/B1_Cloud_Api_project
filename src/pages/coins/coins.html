@@ -15,14 +15,13 @@
 
 <ion-content padding>
   <form id="filter"></form>
-  <label>FIlter coins by name:</label>
-    <ion-searchbar type="text" placeholder="Search coins by name"></ion-searchbar>
+    <ion-searchbar (ionInput)="getItems($event)" [debounce]="500" placeholder="Search coins by name"></ion-searchbar>
   <br>
     <ion-row>
         <ion-col>
-          <div *ngFor="let item of coinData">
+          <div >
             
-            <ion-card>
+            <ion-card *ngFor="let item of coinData">
             <ion-item>
               <h2>{{item.name}}</h2>
               <p>Rank: {{item.rank}}</p>

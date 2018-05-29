@@ -1,5 +1,5 @@
 import { Component, Pipe, PipeTransform } from '@angular/core';
-import { IonicPage, NavController, NavParams, Item, Searchbar } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Item, Searchbar, LoadingController } from 'ionic-angular';
 import { Http, Headers, HttpModule } from '@angular/http';
 import { filter } from 'rxjs/operator/filter';
 import { database } from 'firebase/app';
@@ -18,12 +18,20 @@ export class CoinsPage {
 
   coinData:string;
   url:string;
-  items:any;
+  
+
+   
+  searchQuery: string = '';
+  items: any; // <- items property is now of the same type as posts
   
   
 
-  constructor(public http: Http, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private loadingCtrl: LoadingController, public http: Http, public navCtrl: NavController, public navParams: NavParams) {
 
+    let loadingPopup = this.loadingCtrl.create({
+      content: 'Loading coins...'
+    });
+    
    
   }
    
@@ -32,13 +40,15 @@ export class CoinsPage {
     console.log('ionViewDidLoad CoinsPage');
     this.loadCoin()
     
+    
   }
   loadCoin(){
-    this.http.get('https://api.coinmarketcap.com/v2/ticker/?start=101&limit=10&sort=id&structure=array')
+    this.http.get('https://api.coinmarketcap.com/v2/ticker/?start=101&limit=1000&sort=id&structure=array')
     .map(res => res.json())
     .subscribe(res => {
       this.coinData = res.data;
-      this.coinData = res.data.filter(item => item.name);
+      this.initializeItems();
+      
       //console.log(res.data);
     }, err =>{
       console.log(err);
@@ -58,8 +68,8 @@ export class CoinsPage {
 
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
-      this.items = this.items.filter((item) => {
-        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      this.coinData = this.items.filter((item) => {
+        return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
   }
