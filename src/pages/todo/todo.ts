@@ -29,7 +29,7 @@ export class TodoPage {
   }
 
   loadTodos(){
-    this.http.get('')
+    this.http.get('https://localhost:44365/api/todos/')
     .map(res => res.json())
     .subscribe(res => {
       this.todoData = res.data;

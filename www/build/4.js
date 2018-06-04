@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 500:
+/***/ 498:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WelcomePageModule", function() { return WelcomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__welcome__ = __webpack_require__(520);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__welcome__ = __webpack_require__(518);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -39,7 +39,7 @@ WelcomePageModule = __decorate([
 
 /***/ }),
 
-/***/ 520:
+/***/ 518:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -74,7 +74,7 @@ var WelcomePage = (function () {
 }());
 WelcomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-welcome',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/welcome/welcome.html"*/'\n<ion-header>\n\n\n</ion-header>\n\n\n<ion-content class="container">\n    <img src="assets/imgs/Intro.png" alt="logo" class="logo" >\n    \n  <div class="buttons">\n  <button ion-button text-capitalize id="login"(click)="navigateToPage(\'LoginPage\')">\n    Login\n  </button>\n  <br>\n  <button ion-button outline  text-capitalize id="register"(click)="navigateToPage(\'RegisterPage\')">\n    Registreer nu\n  </button>\n</div>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/welcome/welcome.html"*/,
+        selector: 'page-welcome',template:/*ion-inline-start:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\welcome\welcome.html"*/'\n\n<ion-header>\n\n\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="container">\n\n    <img src="assets/imgs/Intro.png" alt="logo" class="logo" >\n\n    \n\n  <div class="buttons">\n\n  <button ion-button text-capitalize id="login"(click)="navigateToPage(\'LoginPage\')">\n\n    Login\n\n  </button>\n\n  <br>\n\n  <button ion-button outline  text-capitalize id="register"(click)="navigateToPage(\'RegisterPage\')">\n\n    Registreer nu\n\n  </button>\n\n</div>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\welcome\welcome.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
 ], WelcomePage);

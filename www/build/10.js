@@ -1,6 +1,6 @@
 webpackJsonp([10],{
 
-/***/ 490:
+/***/ 491:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ForgotPasswordPageModule", function() { return ForgotPasswordPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forgot_password__ = __webpack_require__(510);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forgot_password__ = __webpack_require__(511);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ ForgotPasswordPageModule = __decorate([
 
 /***/ }),
 
-/***/ 510:
+/***/ 511:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -142,7 +142,7 @@ var ForgotPasswordPage = (function () {
 }());
 ForgotPasswordPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-forgot-password',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/forgot-password/forgot-password.html"*/'<!--\n  Generated template for the ForgotpasswordPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header >\n  \n    <ion-navbar color="primary">\n      <ion-title>Forgot Password</ion-title>\n    </ion-navbar>\n  \n  </ion-header>\n  \n  \n  <ion-content padding class="container">\n      <form #loginForm="ngForm" novalidate>\n  <ion-card>\n    <ion-card-content>\n      <img src="assets/img/avatar.png" alt="avatar" class="avatar">\n      <p>Fill in the email adres you use to login into ou app</p>\n      \n      <ion-label>Email</ion-label>\n      <ion-input \n      [(ngModel)]="recovery" \n      type="email"\n      name="email"\n      pattern="[a-z0-9!#$%&\'*+/=?^_`{\}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{\}~-]+)*@(?:[a-z0-9](?:[a-z0-9]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"\n      #email="ngModel" \n      required></ion-input>\n      <div *ngIf="email.invalid && email.dirty"><span class="global__input-error">E-mail adres ongeldig.</span></div>\n      <button ion-button block (click)="forgotpassword(recovery)" [disabled]="loginForm.invalid">\n        \n      Recover password</button>\n    \n\n    </ion-card-content>\n  </ion-card>\n  <button ion-button block text-center (click)="navigateToPage(\'LoginPage\')">Back to Login</button>\n</form>\n  </ion-content>\n  '/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/forgot-password/forgot-password.html"*/,
+        selector: 'page-forgot-password',template:/*ion-inline-start:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\forgot-password\forgot-password.html"*/'<!--\n\n  Generated template for the ForgotpasswordPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header >\n\n  \n\n    <ion-navbar color="primary">\n\n      <ion-title>Forgot Password</ion-title>\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n  \n\n  \n\n  <ion-content padding class="container">\n\n      <form #loginForm="ngForm" novalidate>\n\n  <ion-card>\n\n    <ion-card-content>\n\n      <img src="assets/img/avatar.png" alt="avatar" class="avatar">\n\n      <p>Fill in the email adres you use to login into ou app</p>\n\n      \n\n      <ion-label>Email</ion-label>\n\n      <ion-input \n\n      [(ngModel)]="recovery" \n\n      type="email"\n\n      name="email"\n\n      pattern="[a-z0-9!#$%&\'*+/=?^_`{\}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{\}~-]+)*@(?:[a-z0-9](?:[a-z0-9]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"\n\n      #email="ngModel" \n\n      required></ion-input>\n\n      <div *ngIf="email.invalid && email.dirty"><span class="global__input-error">E-mail adres ongeldig.</span></div>\n\n      <button ion-button block (click)="forgotpassword(recovery)" [disabled]="loginForm.invalid">\n\n        \n\n      Recover password</button>\n\n    \n\n\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <button ion-button block text-center (click)="navigateToPage(\'LoginPage\')">Back to Login</button>\n\n</form>\n\n  </ion-content>\n\n  '/*ion-inline-end:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\forgot-password\forgot-password.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_toast_toast_controller__["a" /* ToastController */]])
 ], ForgotPasswordPage);

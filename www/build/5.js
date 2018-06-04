@@ -1,6 +1,6 @@
 webpackJsonp([5],{
 
-/***/ 499:
+/***/ 497:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TodoPageModule", function() { return TodoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__todo__ = __webpack_require__(519);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__todo__ = __webpack_require__(517);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ TodoPageModule = __decorate([
 
 /***/ }),
 
-/***/ 519:
+/***/ 517:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -76,7 +76,7 @@ var TodoPage = (function () {
     };
     TodoPage.prototype.loadTodos = function () {
         var _this = this;
-        this.http.get('')
+        this.http.get('https://localhost:44365/api/todos/')
             .map(function (res) { return res.json(); })
             .subscribe(function (res) {
             _this.todoData = res.data;
@@ -105,7 +105,7 @@ var TodoPage = (function () {
 }());
 TodoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-todo',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/todo/todo.html"*/'<!--\n  Generated template for the CoinsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>coins</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form id="filter"></form>\n    <ion-searchbar (ionInput)="getTodos($event)" [debounce]="500" placeholder="Search coins by name"></ion-searchbar>\n    \n  <br>\n    <ion-row>\n        <ion-col>\n          <div >\n            \n            <ion-card *ngFor="let item of todoData">\n            <ion-item>\n              <h2>{{item.name}}</h2>\n              <p>{{item.rank}}</p>\n            </ion-item>\n            <ion-row>\n              <ion-col>\n              </ion-col>\n            </ion-row>\n          </ion-card>\n          </div>\n        </ion-col>\n      </ion-row>\n\n</ion-content>\n\n                \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n         '/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/todo/todo.html"*/,
+        selector: 'page-todo',template:/*ion-inline-start:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\todo\todo.html"*/'<!--\n\n  Generated template for the CoinsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>coins</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <form id="filter"></form>\n\n    <ion-searchbar (ionInput)="getTodos($event)" [debounce]="500" placeholder="Search coins by name"></ion-searchbar>\n\n    \n\n  <br>\n\n    <ion-row>\n\n        <ion-col>\n\n          <div >\n\n            \n\n            <ion-card *ngFor="let item of todoData">\n\n            <ion-item>\n\n              <h2>{{item.title}}</h2>\n\n              <p>{{item.id}}</p>\n\n              <p>{{item.isDone}}</p>\n\n            </ion-item>\n\n            <ion-row>\n\n              <ion-col>\n\n              </ion-col>\n\n            </ion-row>\n\n          </ion-card>\n\n          </div>\n\n        </ion-col>\n\n      </ion-row>\n\n\n\n</ion-content>\n\n\n\n                \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n              \n\n         '/*ion-inline-end:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\todo\todo.html"*/,
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _c || Object])
 ], TodoPage);

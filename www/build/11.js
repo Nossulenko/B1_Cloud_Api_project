@@ -1,6 +1,6 @@
 webpackJsonp([11],{
 
-/***/ 489:
+/***/ 490:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditNotePageModule", function() { return EditNotePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_note__ = __webpack_require__(509);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_note__ = __webpack_require__(510);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ EditNotePageModule = __decorate([
 
 /***/ }),
 
-/***/ 509:
+/***/ 510:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46,7 +46,7 @@ EditNotePageModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_notes_service__ = __webpack_require__(303);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_toast_service__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_toast_service__ = __webpack_require__(305);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -88,7 +88,7 @@ var EditNotePage = (function () {
 }());
 EditNotePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-edit-note',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/edit-note/edit-note.html"*/'<!--\n  Generated template for the EditNotePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="primary">\n    <ion-title>{{note?.title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding class="container">\n    <ion-item>\n        <ion-input type="text" [(ngModel)]="note.title" placeholder="Titel">\n          \n        </ion-input>\n        </ion-item>\n        <ion-item>\n        <ion-textarea type="text"[(ngModel)]="note.description" placeholder="Beschrijving">\n          \n        </ion-textarea>\n        </ion-item>\n        \n        <button ion-button block clear (click)="saveNote(note)">Opslaan</button>\n        <button ion-button block clear color="danger" (click)="removeNote(note)"> \n            Verwijderen\n        </button>\n      </ion-content> \n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/edit-note/edit-note.html"*/,
+        selector: 'page-edit-note',template:/*ion-inline-start:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\edit-note\edit-note.html"*/'<!--\n\n  Generated template for the EditNotePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar color="primary">\n\n    <ion-title>{{note?.title}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="container">\n\n    <ion-item>\n\n        <ion-input type="text" [(ngModel)]="note.title" placeholder="Titel">\n\n          \n\n        </ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n        <ion-textarea type="text"[(ngModel)]="note.description" placeholder="Beschrijving">\n\n          \n\n        </ion-textarea>\n\n        </ion-item>\n\n        \n\n        <button ion-button block clear (click)="saveNote(note)">Opslaan</button>\n\n        <button ion-button block clear color="danger" (click)="removeNote(note)"> \n\n            Verwijderen\n\n        </button>\n\n      </ion-content> \n\n'/*ion-inline-end:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\edit-note\edit-note.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_toast_service__["a" /* ToastService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_notes_service__["a" /* NotesService */]])
 ], EditNotePage);

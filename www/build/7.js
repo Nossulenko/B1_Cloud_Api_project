@@ -1,6 +1,6 @@
 webpackJsonp([7],{
 
-/***/ 493:
+/***/ 492:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(151);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__immersion__ = __webpack_require__(513);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__immersion__ = __webpack_require__(512);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,7 +44,7 @@ ImmersionPageModule = __decorate([
 
 /***/ }),
 
-/***/ 513:
+/***/ 512:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98,7 +98,7 @@ var ImmersionPage = (function () {
 }());
 ImmersionPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-        selector: 'page-immersion',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/immersion/immersion.html"*/'<!--\n  Generated template for the ImmersionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="primary">\n    <ion-title>REST API\'s test page</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding class="container">\n    <ion-row>\n      <ion-col>\n        <div *ngFor="let item of userData">\n          <ion-card>\n          <ion-item>\n            <ion-avatar item-start>\n              <img src="{{item.picture.large}}">\n            </ion-avatar>\n            <h2>{{item.name.first}} {{item.name.last}}</h2>\n            <p>{{item.symbol}}</p>\n          </ion-item>\n          \n          <ion-card-content>\n            <p>{{item.location.street}}, {{item.location.city}} \n            {{item.location.state}}.</p>\n            <p>{{item.location.postcode}}</p>\n            <p>{{item.nat}}</p>\n          </ion-card-content>\n\n          <ion-row>\n            <ion-col>\n              <button ion-button icon-left clear small>\n                <ion-icon name="ios-heart"></ion-icon>\n              </button>\n            </ion-col>\n          </ion-row>\n        </ion-card>\n        </div>\n      </ion-col>\n    </ion-row>\n\n</ion-content>\n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/immersion/immersion.html"*/,
+        selector: 'page-immersion',template:/*ion-inline-start:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\immersion\immersion.html"*/'<!--\n\n  Generated template for the ImmersionPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar color="primary">\n\n    <ion-title>REST API\'s test page</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="container">\n\n    <ion-row>\n\n      <ion-col>\n\n        <div *ngFor="let item of userData">\n\n          <ion-card>\n\n          <ion-item>\n\n            <ion-avatar item-start>\n\n              <img src="{{item.picture.large}}">\n\n            </ion-avatar>\n\n            <h2>{{item.name.first}} {{item.name.last}}</h2>\n\n            <p>{{item.symbol}}</p>\n\n          </ion-item>\n\n          \n\n          <ion-card-content>\n\n            <p>{{item.location.street}}, {{item.location.city}} \n\n            {{item.location.state}}.</p>\n\n            <p>{{item.location.postcode}}</p>\n\n            <p>{{item.nat}}</p>\n\n          </ion-card-content>\n\n\n\n          <ion-row>\n\n            <ion-col>\n\n              <button ion-button icon-left clear small>\n\n                <ion-icon name="ios-heart"></ion-icon>\n\n              </button>\n\n            </ion-col>\n\n          </ion-row>\n\n        </ion-card>\n\n        </div>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\immersion\immersion.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavParams */]])
 ], ImmersionPage);

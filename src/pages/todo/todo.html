@@ -24,8 +24,9 @@
             
             <ion-card *ngFor="let item of todoData">
             <ion-item>
-              <h2>{{item.name}}</h2>
-              <p>{{item.rank}}</p>
+              <h2>{{item.title}}</h2>
+              <p>{{item.id}}</p>
+              <p>{{item.isDone}}</p>
             </ion-item>
             <ion-row>
               <ion-col>
