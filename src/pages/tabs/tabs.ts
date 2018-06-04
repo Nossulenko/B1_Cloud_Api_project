@@ -24,7 +24,7 @@ tab5Root: string;
     this.tab2Root = 'ProfileViewPage';
     this.tab3Root = 'HomePage';
     this.tab4Root = 'AgendaPage';
-    this.tab5Root = "ShowQuotesPage";
+    this.tab5Root = "ShowQuotesPag";
   }
 
 

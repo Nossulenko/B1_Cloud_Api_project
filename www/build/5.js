@@ -72,7 +72,7 @@ var TabsPage = (function () {
 }());
 TabsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-tabs',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/tabs/tabs.html"*/'<ion-tabs>\n    <ion-tab [root]="tab3Root" tabTitle="Home" tabIcon="home"></ion-tab>\n    <ion-tab [root]="tab1Root" tabTitle="Notities" tabIcon="book"></ion-tab>\n    <ion-tab [root]="tab2Root" tabTitle="Profiel" tabIcon="contact"></ion-tab>\n    <ion-tab [root]="tab4Root" tabTitle="Agenda" tabIcon="calendar"></ion-tab>\n    <ion-tab [root]="tab5Root" tabTitle="Quotes" tabIcon="quote"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/tabs/tabs.html"*/,
+        selector: 'page-tabs',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/tabs/tabs.html"*/'<ion-tabs>\n    <ion-tab [root]="tab3Root" tabTitle="Home" tabIcon="home"></ion-tab>\n    <ion-tab [root]="tab1Root" tabTitle="Notities" tabIcon="book"></ion-tab>\n    <ion-tab [root]="tab2Root" tabTitle="Profiel" tabIcon="contact"></ion-tab>\n    <ion-tab [root]="tab4Root" tabTitle="Agenda" tabIcon="calendar"></ion-tab>\n    <ion-tab [root]="tab5Root" tabTitle="Todo" tabIcon="Todo"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/tabs/tabs.html"*/,
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);
