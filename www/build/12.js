@@ -1,14 +1,15 @@
 webpackJsonp([12],{
 
-/***/ 491:
+/***/ 488:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExplorePageModule", function() { return ExplorePageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__explore__ = __webpack_require__(514);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoinsPageModule", function() { return CoinsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__coins__ = __webpack_require__(508);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +19,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ExplorePageModule = (function () {
-    function ExplorePageModule() {
+
+var CoinsPageModule = (function () {
+    function CoinsPageModule() {
     }
-    return ExplorePageModule;
+    return CoinsPageModule;
 }());
-ExplorePageModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
+CoinsPageModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__explore__["a" /* ExplorePage */],
+            __WEBPACK_IMPORTED_MODULE_3__coins__["a" /* CoinsPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__explore__["a" /* ExplorePage */]),
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__coins__["a" /* CoinsPage */]),
+            __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* HttpModule */],
         ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* HttpModule */]
+        ]
     })
-], ExplorePageModule);
+], CoinsPageModule);
 
-//# sourceMappingURL=explore.module.js.map
+//# sourceMappingURL=coins.module.js.map
 
 /***/ }),
 
-/***/ 514:
+/***/ 508:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExplorePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoinsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(151);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,35 +63,59 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-//import { ViewChild } from '@angular/core';
 
-
-var ExplorePage = (function () {
-    function ExplorePage(navCtrl, navParams) {
+var CoinsPage = (function () {
+    function CoinsPage(loadingCtrl, http, navCtrl, navParams) {
+        this.loadingCtrl = loadingCtrl;
+        this.http = http;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.searchQuery = '';
+        var loadingPopup = this.loadingCtrl.create({
+            content: 'Loading coins...'
+        });
     }
-    ExplorePage.prototype.goToSlide = function () {
-        this.slides.slideTo(2, 500);
+    CoinsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CoinsPage');
+        this.loadCoin();
     };
-    ExplorePage.prototype.slideChanged = function () {
-        var currentIndex = this.slides.getActiveIndex();
-        console.log('Current index is', currentIndex);
+    CoinsPage.prototype.loadCoin = function () {
+        var _this = this;
+        this.http.get('https://api.coinmarketcap.com/v2/ticker/?start=101&limit=1000&sort=id&structure=array')
+            .map(function (res) { return res.json(); })
+            .subscribe(function (res) {
+            _this.coinData = res.data;
+            _this.initializeItems();
+            //console.log(res.data);
+        }, function (err) {
+            console.log(err);
+        });
     };
-    return ExplorePage;
+    CoinsPage.prototype.initializeItems = function () {
+        this.items = this.coinData;
+    };
+    CoinsPage.prototype.getItems = function (ev) {
+        // Reset items back to all of the items
+        this.initializeItems();
+        // set val to the value of the searchbar
+        var val = ev.target.value;
+        // if the value is an empty string don't filter the items
+        if (val && val.trim() != '') {
+            this.coinData = this.items.filter(function (item) {
+                return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+            });
+        }
+    };
+    return CoinsPage;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Slides */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Slides */])
-], ExplorePage.prototype, "slides", void 0);
-ExplorePage = __decorate([
+CoinsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-explore',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/explore/explore.html"*/'<!--\n  Generated template for the ExplorePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n<ion-navbar color="primary">\n<ion-title>1</ion-title>\n</ion-navbar>\n</ion-header>\n<ion-content class="container">\n  <ion-slides>\n    <ion-slide tappable ><img src="assets/img/5W.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/MVT.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/BYB.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/pjb.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/GVSO.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/100.jpg"></ion-slide>\n    <ion-slide tappable ><img src="assets/img/iv.jpg"></ion-slide>\n  </ion-slides>\n\n</ion-content>\n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/explore/explore.html"*/,
+        selector: 'page-coins',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/coins/coins.html"*/'<!--\n  Generated template for the CoinsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>coins</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form id="filter"></form>\n    <ion-searchbar (ionInput)="getItems($event)" [debounce]="500" placeholder="Search coins by name"></ion-searchbar>\n    <button ion-button icon-left>\n      </button>\n  <br>\n    <ion-row>\n        <ion-col>\n          <div >\n            \n            <ion-card *ngFor="let item of coinData">\n            <ion-item>\n              <h2>{{item.name}}</h2>\n              <p>Rank: {{item.rank}}</p>\n              <br>\n              <p>Price: ${{item.quotes.USD.price }}</p>\n              <p>Total Supply: {{item.total_supply}}</p>\n            </ion-item>\n            <ion-row>\n              <ion-col>\n              </ion-col>\n            </ion-row>\n          </ion-card>\n          </div>\n        </ion-col>\n      </ion-row>\n\n</ion-content>\n\n                \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n         '/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/coins/coins.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-], ExplorePage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+], CoinsPage);
 
-//# sourceMappingURL=explore.js.map
+//# sourceMappingURL=coins.js.map
 
 /***/ })
 

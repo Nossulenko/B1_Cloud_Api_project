@@ -29,7 +29,7 @@ export class TodoPage {
   }
 
   loadTodos(){
-    this.http.get('https://api.coinmarketcap.com/v2/ticker/?start=101&limit=1000&sort=id&structure=array')
+    this.http.get('')
     .map(res => res.json())
     .subscribe(res => {
       this.todoData = res.data;

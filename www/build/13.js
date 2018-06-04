@@ -1,14 +1,15 @@
 webpackJsonp([13],{
 
-/***/ 490:
+/***/ 487:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditNotePageModule", function() { return EditNotePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BuriedoneShopPageModule", function() { return BuriedoneShopPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_note__ = __webpack_require__(513);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__buriedone_shop__ = __webpack_require__(507);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__ = __webpack_require__(305);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +19,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var EditNotePageModule = (function () {
-    function EditNotePageModule() {
+
+var BuriedoneShopPageModule = (function () {
+    function BuriedoneShopPageModule() {
     }
-    return EditNotePageModule;
+    return BuriedoneShopPageModule;
 }());
-EditNotePageModule = __decorate([
+BuriedoneShopPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__edit_note__["a" /* EditNotePage */],
+            __WEBPACK_IMPORTED_MODULE_2__buriedone_shop__["a" /* BuriedoneShopPage */],
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__edit_note__["a" /* EditNotePage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__buriedone_shop__["a" /* BuriedoneShopPage */]),
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */]
         ],
     })
-], EditNotePageModule);
+], BuriedoneShopPageModule);
 
-//# sourceMappingURL=edit-note.module.js.map
+//# sourceMappingURL=buriedone-shop.module.js.map
 
 /***/ }),
 
-/***/ 513:
+/***/ 507:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditNotePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BuriedoneShopPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_notes_service__ = __webpack_require__(303);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_toast_service__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__ = __webpack_require__(305);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,41 +64,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var EditNotePage = (function () {
-    function EditNotePage(navCtrl, toast, navParams, notesservice) {
+/**
+ * Generated class for the BuriedoneShopPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var BuriedoneShopPage = (function () {
+    function BuriedoneShopPage(navCtrl, navParams, iab) {
         this.navCtrl = navCtrl;
-        this.toast = toast;
         this.navParams = navParams;
-        this.notesservice = notesservice;
-        this.note = this.navParams.get('note');
+        this.iab = iab;
     }
-    EditNotePage.prototype.ionViewDidLoad = function () {
+    BuriedoneShopPage.prototype.openWebpage = function (url) {
+        var options = {
+            zoom: 'no'
+        };
+        var browser = this.iab.create(url, '_self', options);
     };
-    EditNotePage.prototype.saveNote = function (note) {
-        var _this = this;
-        this.notesservice.editNote(note).then(function () {
-            _this.toast.show("Notitie opgeslagen");
-            _this.navCtrl.setRoot('Home2Page');
-        });
-    };
-    EditNotePage.prototype.removeNote = function (note) {
-        var _this = this;
-        this.notesservice.removeNote(note).then(function () {
-            _this.toast.show("Notitie verwijderd");
-            _this.navCtrl.setRoot('Home2Page');
-        });
-    };
-    return EditNotePage;
+    return BuriedoneShopPage;
 }());
-EditNotePage = __decorate([
+BuriedoneShopPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-edit-note',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/edit-note/edit-note.html"*/'<!--\n  Generated template for the EditNotePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="primary">\n    <ion-title>{{note?.title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding class="container">\n    <ion-item>\n        <ion-input type="text" [(ngModel)]="note.title" placeholder="Titel">\n          \n        </ion-input>\n        </ion-item>\n        <ion-item>\n        <ion-textarea type="text"[(ngModel)]="note.description" placeholder="Beschrijving">\n          \n        </ion-textarea>\n        </ion-item>\n        \n        <button ion-button block clear (click)="saveNote(note)">Opslaan</button>\n        <button ion-button block clear color="danger" (click)="removeNote(note)"> \n            Verwijderen\n        </button>\n      </ion-content> \n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/edit-note/edit-note.html"*/,
+        selector: 'page-buriedone-shop',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/buriedone-shop/buriedone-shop.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n    <ion-title></ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="container">\n  <img src="assets/img/training_courses1.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=2\')">\n  <img src="assets/img/training_courses2.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=3\')">\n  <img src="assets/img/training_courses3.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=5\')">\n  <img src="assets/img/training_courses4.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=1\')">\n  <img src="assets/img/training_courses5.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=4\')">\n  <img src="assets/img/training_courses6.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=6\')">\n</ion-content>\n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/buriedone-shop/buriedone-shop.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_toast_service__["a" /* ToastService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_notes_service__["a" /* NotesService */]])
-], EditNotePage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__["a" /* InAppBrowser */]])
+], BuriedoneShopPage);
 
-//# sourceMappingURL=edit-note.js.map
+//# sourceMappingURL=buriedone-shop.js.map
 
 /***/ })
 
