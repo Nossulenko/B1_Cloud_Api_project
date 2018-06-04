@@ -25803,24 +25803,6 @@ page-buriedone-shop img {
   width: 100%;
 }
 
-page-explore ion-slides {
-  margin-top: 5px;
-  height: 260px;
-  width: 415px;
-}
-
-page-explore .swiper-container {
-  width: 401px;
-}
-
-page-explore .slide-zoom {
-  width: 450px;
-}
-
-page-explore ion-slide.swiper-slide {
-  width: 400px;
-}
-
 page-forgot-password ion-label {
   font-weight: bold;
 }
@@ -25899,16 +25881,6 @@ p {
   color: red;
 }
 
-page-quote #auteur {
-  width: 50%;
-  background: white;
-}
-
-page-quote #quote {
-  height: 25%;
-  background: #f1f1f1;
-}
-
 page-register .logo {
   width: 150px;
   height: 135px;
@@ -25918,153 +25890,6 @@ page-register .logo {
 
 page-register .container {
   background-color: #ffff;
-}
-
-page-show-quotes .triangle-isosceles {
-  position: relative;
-  padding: 15px;
-  margin: 1em 0 3em;
-  color: #000;
-  background: #b6b6b6;
-  border-radius: 10px;
-  quotes: "\0022" "\0022";
-}
-
-page-show-quotes .dark {
-  background-color: transparent;
-}
-
-page-show-quotes .w3-light-grey, page-show-quotes .w3-hover-light-grey:hover, page-show-quotes .w3-light-gray, page-show-quotes .w3-hover-light-gray:hover {
-  color: #000 !important;
-  background-color: #f1f1f1 !important;
-}
-
-page-show-quotes .w3-leftbar {
-  border-left: 6px solid #ccc !important;
-}
-
-page-show-quotes .w3-panel {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-page-show-quotes .w3-container, page-show-quotes .w3-panel {
-  padding: 0.01em 16px;
-}
-
-page-show-quotes *, page-show-quotes *:before, page-show-quotes *:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-page-show-quotes div {
-  display: block;
-}
-
-page-show-quotes .w3-white, page-show-quotes .w3-hover-white:hover {
-  color: #000 !important;
-  background-color: #fff !important;
-}
-
-page-show-quotes .w3-light-grey, page-show-quotes .w3-hover-light-grey:hover, page-show-quotes .w3-light-gray, page-show-quotes .w3-hover-light-gray:hover {
-  color: #000 !important;
-  background-color: #f1f1f1 !important;
-}
-
-page-show-quotes html, page-show-quotes body {
-  font-family: Verdana,sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-page-show-quotes html, page-show-quotes body {
-  font-family: Verdana,sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-page-show-quotes html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-page-show-quotes .w3-container:after, page-show-quotes .w3-container:before, page-show-quotes .w3-panel:after, page-show-quotes .w3-panel:before, page-show-quotes .w3-row:after, page-show-quotes .w3-row:before, page-show-quotes .w3-row-padding:after, page-show-quotes .w3-row-padding:before, page-show-quotes .w3-cell-row:before, page-show-quotes .w3-cell-row:after, page-show-quotes .w3-clear:after, page-show-quotes .w3-clear:before, page-show-quotes .w3-bar:before, page-show-quotes .w3-bar:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-page-show-quotes *, page-show-quotes *:before, page-show-quotes *:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-page-show-quotes .w3-container:after, page-show-quotes .w3-container:before, page-show-quotes .w3-panel:after, page-show-quotes .w3-panel:before, page-show-quotes .w3-row:after, page-show-quotes .w3-row:before, page-show-quotes .w3-row-padding:after, page-show-quotes .w3-row-padding:before, page-show-quotes .w3-cell-row:before, page-show-quotes .w3-cell-row:after, page-show-quotes .w3-clear:after, page-show-quotes .w3-clear:before, page-show-quotes .w3-bar:before, page-show-quotes .w3-bar:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-page-show-quotes *, page-show-quotes *:before, page-show-quotes *:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-page-show-quotes .w3-xlarge {
-  font-size: 24px !important;
-}
-
-page-show-quotes .w3-serif {
-  font-family: serif;
-}
-
-page-show-quotes *, page-show-quotes *:before, page-show-quotes *:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-page-show-quotes p {
-  display: block;
-  -webkit-margin-before: 1em;
-  -webkit-margin-after: 1em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-}
-
-page-show-quotes .w3-light-grey, page-show-quotes .w3-hover-light-grey:hover, page-show-quotes .w3-light-gray, page-show-quotes .w3-hover-light-gray:hover {
-  color: #000 !important;
-  background-color: #f1f1f1 !important;
-}
-
-page-show-quotes html, page-show-quotes body {
-  font-family: Verdana,sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-page-show-quotes html, page-show-quotes body {
-  font-family: Verdana,sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-page-show-quotes html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-page-show-quotes *, page-show-quotes *:before, page-show-quotes *:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-page-show-quotes *, page-show-quotes *:before, page-show-quotes *:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-ion-item {
-  background-color: transparent;
 }
 
 page-welcome div .buttons {

@@ -138,76 +138,80 @@ webpackEmptyAsyncContext.id = 162;
 
 var map = {
 	"../pages/add-note/add-note.module": [
-		486,
-		17
+		487,
+		38
 	],
 	"../pages/agenda/agenda.module": [
-		487,
-		16
+		486,
+		37
 	],
 	"../pages/buriedone-shop/buriedone-shop.module": [
-		488,
-		15
+		489,
+		36
 	],
 	"../pages/coins/coins.module": [
-		489,
-		14
+		488,
+		35
 	],
 	"../pages/edit-note/edit-note.module": [
-		491,
-		13
+		490,
+		34
 	],
 	"../pages/explore/explore.module": [
-		490,
-		12
+		491,
+		33
 	],
 	"../pages/forgot-password/forgot-password.module": [
 		492,
-		11
+		32
 	],
 	"../pages/home/home.module": [
 		493,
-		10
+		31
 	],
 	"../pages/home2/home2.module": [
 		494,
-		9
+		30
 	],
 	"../pages/immersion/immersion.module": [
 		495,
-		8
+		29
 	],
 	"../pages/login/login.module": [
-		497,
-		3
+		503,
+		23
 	],
 	"../pages/profile-view/profile-view.module": [
 		496,
-		2
+		22
 	],
 	"../pages/profile/profile.module": [
-		498,
-		1
+		497,
+		21
 	],
 	"../pages/quote/quote.module": [
-		499,
-		7
+		498,
+		28
 	],
 	"../pages/register/register.module": [
-		500,
-		0
+		499,
+		20
 	],
 	"../pages/show-quotes/show-quotes.module": [
-		501,
-		6
+		500,
+		27
 	],
 	"../pages/tabs/tabs.module": [
-		502,
-		5
+		501,
+		26
+	],
+	"../pages/todo/todo.module": [
+		527,
+		25
 	],
 	"../pages/welcome/welcome.module": [
-		503,
-		4
+		502,
+		24
 	]
 };
 function webpackAsyncContext(req) {
@@ -499,24 +503,24 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                 links: [
-                    { loadChildren: '../pages/add-note/add-note.module#AddNotePageModule', name: 'AddNotePage', segment: 'add-note', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/agenda/agenda.module#AgendaPageModule', name: 'AgendaPage', segment: 'agenda', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/buriedone-shop/buriedone-shop.module#BuriedoneShopPageModule', name: 'BuriedoneShopPage', segment: 'buriedone-shop', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/add-note/add-note.module#AddNotePageModule', name: 'AddNotePage', segment: 'add-note', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/coins/coins.module#CoinsPageModule', name: 'CoinsPage', segment: 'coins', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/explore/explore.module#ExplorePageModule', name: 'ExplorePage', segment: 'explore', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/buriedone-shop/buriedone-shop.module#BuriedoneShopPageModule', name: 'BuriedoneShopPage', segment: 'buriedone-shop', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/edit-note/edit-note.module#EditNotePageModule', name: 'EditNotePage', segment: 'edit-note', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/explore/explore.module#ExplorePageModule', name: 'ExplorePage', segment: 'explore', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/forgot-password/forgot-password.module#ForgotPasswordPageModule', name: 'ForgotPasswordPage', segment: 'forgot-password', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/home2/home2.module#Home2PageModule', name: 'Home2Page', segment: 'home2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/immersion/immersion.module#ImmersionPageModule', name: 'ImmersionPage', segment: 'immersion', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/profile-view/profile-view.module#ProfileViewPageModule', name: 'ProfileViewPage', segment: 'profile-view', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/quote/quote.module#QuotePageModule', name: 'QuotePage', segment: 'quote', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/show-quotes/show-quotes.module#ShowQuotesPageModule', name: 'ShowQuotesPage', segment: 'show-quotes', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] }
                 ]
             }),
             __WEBPACK_IMPORTED_MODULE_8_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_9__app_firebase_config__["a" /* FIREBASE_CONFIG */]),

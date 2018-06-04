@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { QuotePage } from './quote';
+import { TodoPage } from './todo';
 
 @NgModule({
   declarations: [
-    QuotePage,
+    TodoPage,
   ],
   imports: [
-    IonicPageModule.forChild(QuotePage),
+    IonicPageModule.forChild(TodoPage),
   ],
 })
-export class QuotePageModule {}
+export class TodoPageModule {}
