@@ -1,15 +1,14 @@
 webpackJsonp([7],{
 
-/***/ 492:
+/***/ 491:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImmersionPageModule", function() { return ImmersionPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__immersion__ = __webpack_require__(512);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(511);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,41 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var ImmersionPageModule = (function () {
-    function ImmersionPageModule() {
+var HomePageModule = (function () {
+    function HomePageModule() {
     }
-    return ImmersionPageModule;
+    return HomePageModule;
 }());
-ImmersionPageModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
+HomePageModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_3__immersion__["a" /* ImmersionPage */],
+            __WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__immersion__["a" /* ImmersionPage */]),
-            __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */]),
         ],
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* HttpModule */]
-        ]
     })
-], ImmersionPageModule);
+], HomePageModule);
 
-//# sourceMappingURL=immersion.module.js.map
+//# sourceMappingURL=home.module.js.map
 
 /***/ }),
 
-/***/ 512:
+/***/ 511:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImmersionPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65,45 +56,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
 /**
- * Generated class for the ImmersionPage page.
+ * Generated class for the HomePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var ImmersionPage = (function () {
-    function ImmersionPage(http, navCtrl, navParams) {
-        this.http = http;
+var HomePage = (function () {
+    function HomePage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    ImmersionPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ImmersionPage');
-        this.loadJson();
+    HomePage.prototype.navigateToPage = function (pageName) {
+        this.navCtrl.push(pageName);
     };
-    ImmersionPage.prototype.loadJson = function () {
-        var _this = this;
-        this.http.get('https://randomuser.me/api/?results=10')
-            .map(function (res) { return res.json(); })
-            .subscribe(function (res) {
-            _this.userData = res.results;
-            console.log(res.results);
-        }, function (err) {
-            console.log(err);
-        });
-    };
-    return ImmersionPage;
+    return HomePage;
 }());
-ImmersionPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-        selector: 'page-immersion',template:/*ion-inline-start:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\immersion\immersion.html"*/'<!--\n\n  Generated template for the ImmersionPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar color="primary">\n\n    <ion-title>REST API\'s test page</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="container">\n\n    <ion-row>\n\n      <ion-col>\n\n        <div *ngFor="let item of userData">\n\n          <ion-card>\n\n          <ion-item>\n\n            <ion-avatar item-start>\n\n              <img src="{{item.picture.large}}">\n\n            </ion-avatar>\n\n            <h2>{{item.name.first}} {{item.name.last}}</h2>\n\n            <p>{{item.symbol}}</p>\n\n          </ion-item>\n\n          \n\n          <ion-card-content>\n\n            <p>{{item.location.street}}, {{item.location.city}} \n\n            {{item.location.state}}.</p>\n\n            <p>{{item.location.postcode}}</p>\n\n            <p>{{item.nat}}</p>\n\n          </ion-card-content>\n\n\n\n          <ion-row>\n\n            <ion-col>\n\n              <button ion-button icon-left clear small>\n\n                <ion-icon name="ios-heart"></ion-icon>\n\n              </button>\n\n            </ion-col>\n\n          </ion-row>\n\n        </ion-card>\n\n        </div>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\immersion\immersion.html"*/,
+HomePage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-home',template:/*ion-inline-start:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\home\home.html"*/'<!--\n\n  Generated template for the HomePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar color="primary">\n\n    <ion-title>Buriedone</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="container">\n\n  <div class="image-container">\n\n    <img src="assets/imgs/gpuMining.png" (click)="navigateToPage(\'\')"alt="gpuMining">\n\n    <div class="centered"></div>\n\n    <div clas="right"><img src="assets/img/arrow.png"></div>\n\n  </div>\n\n  <div class="image-container">\n\n    <img src="assets/imgs/buildRigCol.png" (click)="navigateToPage(\'\')"alt="buildRigCol">\n\n    <div class="centered"></div>\n\n  </div>\n\n  <div class="image-container">\n\n    <img src="assets/imgs/coinPrices.png" (click)="navigateToPage(\'CoinsPage\')" alt="coinPrices">\n\n    <div class="centered"></div>\n\n  </div>\n\n  <div class="image-container">\n\n    <img src="assets/imgs/shop.png" (click)="navigateToPage(\'\')" alt="shop">\n\n    <div class="centered"></div>\n\n  </div>\n\n  <div class="image-container">\n\n    <img src="assets/imgs/community.png" (click)="navigateToPage(\'CommunityPage\')" alt="community">\n\n    <div class="centered"></div>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\home\home.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavParams */]])
-], ImmersionPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+], HomePage);
 
-//# sourceMappingURL=immersion.js.map
+//# sourceMappingURL=home.js.map
 
 /***/ })
 

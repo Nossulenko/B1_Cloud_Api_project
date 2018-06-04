@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>coins</ion-title>
+    <ion-title>Rig building planner</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,7 +15,7 @@
 
 <ion-content padding>
   <form id="filter"></form>
-    <ion-searchbar (ionInput)="getTodos($event)" [debounce]="500" placeholder="Search coins by name"></ion-searchbar>
+    <ion-searchbar (ionInput)="getTodos($event)" [debounce]="500" placeholder="Search todo's by title"></ion-searchbar>
     
   <br>
     <ion-row>
@@ -25,8 +25,8 @@
             <ion-card *ngFor="let item of todoData">
             <ion-item>
               <h2>{{item.title}}</h2>
-              <p>{{item.id}}</p>
-              <p>{{item.isDone}}</p>
+              <h2>{{item.id}}</h2>
+              <h2>{{item.isDone}}</h2>
             </ion-item>
             <ion-row>
               <ion-col>

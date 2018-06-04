@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 496:
+/***/ 497:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs__ = __webpack_require__(516);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs__ = __webpack_require__(517);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ TabsPageModule = __decorate([
 
 /***/ }),
 
-/***/ 516:
+/***/ 517:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65,14 +65,14 @@ var TabsPage = (function () {
         this.tab1Root = 'Home2Page';
         this.tab2Root = 'ProfileViewPage';
         this.tab3Root = 'HomePage';
-        this.tab4Root = '';
+        this.tab4Root = 'CommunityPage';
         this.tab5Root = "TodoPage";
     }
     return TabsPage;
 }());
 TabsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n    <ion-tab [root]="tab3Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n    <ion-tab [root]="tab1Root" tabTitle="Notities" tabIcon="book"></ion-tab>\n\n    <ion-tab [root]="tab2Root" tabTitle="Profiel" tabIcon="contact"></ion-tab>\n\n    <ion-tab [root]="tab4Root" tabTitle="Community" tabIcon="calendar"></ion-tab>\n\n    <ion-tab [root]="tab5Root" tabTitle="Todo" tabIcon="create"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\tabs\tabs.html"*/,
+        selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n    <ion-tab [root]="tab3Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n    <ion-tab [root]="tab1Root" tabTitle="Notities" tabIcon="book"></ion-tab>\n\n    <ion-tab [root]="tab2Root" tabTitle="Profiel" tabIcon="contact"></ion-tab>\n\n    <ion-tab [root]="tab4Root" tabTitle="Community" tabIcon="body"></ion-tab>\n\n    <ion-tab [root]="tab5Root" tabTitle="Todo" tabIcon="create"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"C:\Users\dell\Desktop\Cloud Api Project\projectCloudApi\src\pages\tabs\tabs.html"*/,
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);

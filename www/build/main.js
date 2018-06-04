@@ -138,7 +138,7 @@ webpackEmptyAsyncContext.id = 162;
 
 var map = {
 	"../pages/add-note/add-note.module": [
-		487,
+		489,
 		14
 	],
 	"../pages/buriedone-shop/buriedone-shop.module": [
@@ -146,55 +146,55 @@ var map = {
 		13
 	],
 	"../pages/coins/coins.module": [
-		488,
+		487,
 		12
+	],
+	"../pages/community/community.module": [
+		488,
+		11
 	],
 	"../pages/edit-note/edit-note.module": [
 		490,
-		11
-	],
-	"../pages/forgot-password/forgot-password.module": [
-		491,
 		10
 	],
-	"../pages/home/home.module": [
-		489,
-		8
-	],
-	"../pages/home2/home2.module": [
-		500,
+	"../pages/forgot-password/forgot-password.module": [
+		492,
 		9
 	],
-	"../pages/immersion/immersion.module": [
-		492,
+	"../pages/home/home.module": [
+		491,
 		7
 	],
+	"../pages/home2/home2.module": [
+		493,
+		8
+	],
 	"../pages/login/login.module": [
-		499,
+		495,
 		3
 	],
 	"../pages/profile-view/profile-view.module": [
-		493,
+		494,
 		2
 	],
 	"../pages/profile/profile.module": [
-		494,
+		496,
 		1
 	],
 	"../pages/register/register.module": [
-		495,
+		498,
 		0
 	],
 	"../pages/tabs/tabs.module": [
-		496,
+		497,
 		6
 	],
 	"../pages/todo/todo.module": [
-		497,
+		500,
 		5
 	],
 	"../pages/welcome/welcome.module": [
-		498,
+		499,
 		4
 	]
 };
@@ -488,20 +488,20 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                 links: [
                     { loadChildren: '../pages/buriedone-shop/buriedone-shop.module#BuriedoneShopPageModule', name: 'BuriedoneShopPage', segment: 'buriedone-shop', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/add-note/add-note.module#AddNotePageModule', name: 'AddNotePage', segment: 'add-note', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/coins/coins.module#CoinsPageModule', name: 'CoinsPage', segment: 'coins', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/community/community.module#CommunityPageModule', name: 'CommunityPage', segment: 'community', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/add-note/add-note.module#AddNotePageModule', name: 'AddNotePage', segment: 'add-note', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/edit-note/edit-note.module#EditNotePageModule', name: 'EditNotePage', segment: 'edit-note', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/forgot-password/forgot-password.module#ForgotPasswordPageModule', name: 'ForgotPasswordPage', segment: 'forgot-password', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/immersion/immersion.module#ImmersionPageModule', name: 'ImmersionPage', segment: 'immersion', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/home2/home2.module#Home2PageModule', name: 'Home2Page', segment: 'home2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/profile-view/profile-view.module#ProfileViewPageModule', name: 'ProfileViewPage', segment: 'profile-view', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/todo/todo.module#TodoPageModule', name: 'TodoPage', segment: 'todo', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/home2/home2.module#Home2PageModule', name: 'Home2Page', segment: 'home2', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/todo/todo.module#TodoPageModule', name: 'TodoPage', segment: 'todo', priority: 'low', defaultHistory: [] }
                 ]
             }),
             __WEBPACK_IMPORTED_MODULE_8_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_9__app_firebase_config__["a" /* FIREBASE_CONFIG */]),
