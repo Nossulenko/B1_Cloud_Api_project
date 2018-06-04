@@ -1,14 +1,15 @@
 webpackJsonp([14],{
 
-/***/ 488:
+/***/ 489:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditNotePageModule", function() { return EditNotePageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_note__ = __webpack_require__(511);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoinsPageModule", function() { return CoinsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__coins__ = __webpack_require__(512);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +19,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var EditNotePageModule = (function () {
-    function EditNotePageModule() {
+
+var CoinsPageModule = (function () {
+    function CoinsPageModule() {
     }
-    return EditNotePageModule;
+    return CoinsPageModule;
 }());
-EditNotePageModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
+CoinsPageModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__edit_note__["a" /* EditNotePage */],
+            __WEBPACK_IMPORTED_MODULE_3__coins__["a" /* CoinsPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__edit_note__["a" /* EditNotePage */]),
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__coins__["a" /* CoinsPage */]),
+            __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* HttpModule */],
         ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* HttpModule */]
+        ]
     })
-], EditNotePageModule);
+], CoinsPageModule);
 
-//# sourceMappingURL=edit-note.module.js.map
+//# sourceMappingURL=coins.module.js.map
 
 /***/ }),
 
-/***/ 511:
+/***/ 512:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditNotePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoinsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_notes_service__ = __webpack_require__(303);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_toast_service__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(151);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,41 +64,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var EditNotePage = (function () {
-    function EditNotePage(navCtrl, toast, navParams, notesservice) {
+var CoinsPage = (function () {
+    function CoinsPage(loadingCtrl, http, navCtrl, navParams) {
+        this.loadingCtrl = loadingCtrl;
+        this.http = http;
         this.navCtrl = navCtrl;
-        this.toast = toast;
         this.navParams = navParams;
-        this.notesservice = notesservice;
-        this.note = this.navParams.get('note');
+        this.searchQuery = '';
+        var loadingPopup = this.loadingCtrl.create({
+            content: 'Loading coins...'
+        });
     }
-    EditNotePage.prototype.ionViewDidLoad = function () {
+    CoinsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CoinsPage');
+        this.loadCoin();
     };
-    EditNotePage.prototype.saveNote = function (note) {
+    CoinsPage.prototype.loadCoin = function () {
         var _this = this;
-        this.notesservice.editNote(note).then(function () {
-            _this.toast.show("Notitie opgeslagen");
-            _this.navCtrl.setRoot('Home2Page');
+        this.http.get('https://api.coinmarketcap.com/v2/ticker/?start=101&limit=1000&sort=id&structure=array')
+            .map(function (res) { return res.json(); })
+            .subscribe(function (res) {
+            _this.coinData = res.data;
+            _this.initializeItems();
+            //console.log(res.data);
+        }, function (err) {
+            console.log(err);
         });
     };
-    EditNotePage.prototype.removeNote = function (note) {
-        var _this = this;
-        this.notesservice.removeNote(note).then(function () {
-            _this.toast.show("Notitie verwijderd");
-            _this.navCtrl.setRoot('Home2Page');
-        });
+    CoinsPage.prototype.initializeItems = function () {
+        this.items = this.coinData;
     };
-    return EditNotePage;
+    CoinsPage.prototype.getItems = function (ev) {
+        // Reset items back to all of the items
+        this.initializeItems();
+        // set val to the value of the searchbar
+        var val = ev.target.value;
+        // if the value is an empty string don't filter the items
+        if (val && val.trim() != '') {
+            this.coinData = this.items.filter(function (item) {
+                return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+            });
+        }
+    };
+    return CoinsPage;
 }());
-EditNotePage = __decorate([
+CoinsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-edit-note',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/edit-note/edit-note.html"*/'<!--\n  Generated template for the EditNotePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="primary">\n    <ion-title>{{note?.title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding class="container">\n    <ion-item>\n        <ion-input type="text" [(ngModel)]="note.title" placeholder="Titel">\n          \n        </ion-input>\n        </ion-item>\n        <ion-item>\n        <ion-textarea type="text"[(ngModel)]="note.description" placeholder="Beschrijving">\n          \n        </ion-textarea>\n        </ion-item>\n        \n        <button ion-button block clear (click)="saveNote(note)">Opslaan</button>\n        <button ion-button block clear color="danger" (click)="removeNote(note)"> \n            Verwijderen\n        </button>\n      </ion-content> \n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/edit-note/edit-note.html"*/,
+        selector: 'page-coins',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/coins/coins.html"*/'<!--\n  Generated template for the CoinsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>coins</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form id="filter"></form>\n    <ion-searchbar (ionInput)="getItems($event)" [debounce]="500" placeholder="Search coins by name"></ion-searchbar>\n    <button ion-button icon-left>\n      </button>\n  <br>\n    <ion-row>\n        <ion-col>\n          <div >\n            \n            <ion-card *ngFor="let item of coinData">\n            <ion-item>\n              <h2>{{item.name}}</h2>\n              <p>Rank: {{item.rank}}</p>\n              <br>\n              <p>Price: ${{item.quotes.USD.price }}</p>\n              <p>Total Supply: {{item.total_supply}}</p>\n            </ion-item>\n            <ion-row>\n              <ion-col>\n              </ion-col>\n            </ion-row>\n          </ion-card>\n          </div>\n        </ion-col>\n      </ion-row>\n\n</ion-content>\n\n                \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n         '/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/coins/coins.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_toast_service__["a" /* ToastService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_notes_service__["a" /* NotesService */]])
-], EditNotePage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+], CoinsPage);
 
-//# sourceMappingURL=edit-note.js.map
+//# sourceMappingURL=coins.js.map
 
 /***/ })
 

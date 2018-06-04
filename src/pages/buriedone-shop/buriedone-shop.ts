@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser';
 
 /**
- * Generated class for the TrainingCoursesPage page.
+ * Generated class for the BuriedoneShopPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,13 +11,14 @@ import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser'
 
 @IonicPage()
 @Component({
-  selector: 'page-training-courses',
-  templateUrl: 'training-courses.html',
+  selector: 'page-buriedone-shop',
+  templateUrl: 'buriedone-shop.html',
 })
-export class TrainingCoursesPage {
+export class BuriedoneShopPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public iab: InAppBrowser) {
   }
+
   openWebpage(url: string) {
     
     const options: InAppBrowserOptions = {
@@ -25,4 +26,5 @@ export class TrainingCoursesPage {
     }
     const browser = this.iab.create(url, '_self', options);
    }
+
 }

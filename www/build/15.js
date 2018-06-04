@@ -1,15 +1,15 @@
 webpackJsonp([15],{
 
-/***/ 487:
+/***/ 488:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoinsPageModule", function() { return CoinsPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(302);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__coins__ = __webpack_require__(510);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BuriedoneShopPageModule", function() { return BuriedoneShopPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__buriedone_shop__ = __webpack_require__(511);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__ = __webpack_require__(306);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,38 +20,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoinsPageModule = (function () {
-    function CoinsPageModule() {
+var BuriedoneShopPageModule = (function () {
+    function BuriedoneShopPageModule() {
     }
-    return CoinsPageModule;
+    return BuriedoneShopPageModule;
 }());
-CoinsPageModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
+BuriedoneShopPageModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_3__coins__["a" /* CoinsPage */],
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__coins__["a" /* CoinsPage */]),
-            __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_2__buriedone_shop__["a" /* BuriedoneShopPage */],
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* HttpModule */]
-        ]
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */],
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__buriedone_shop__["a" /* BuriedoneShopPage */]),
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */]
+        ],
     })
-], CoinsPageModule);
+], BuriedoneShopPageModule);
 
-//# sourceMappingURL=coins.module.js.map
+//# sourceMappingURL=buriedone-shop.module.js.map
 
 /***/ }),
 
-/***/ 510:
+/***/ 511:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoinsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BuriedoneShopPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__ = __webpack_require__(306);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -64,59 +64,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var CoinsPage = (function () {
-    function CoinsPage(loadingCtrl, http, navCtrl, navParams) {
-        this.loadingCtrl = loadingCtrl;
-        this.http = http;
+/**
+ * Generated class for the BuriedoneShopPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var BuriedoneShopPage = (function () {
+    function BuriedoneShopPage(navCtrl, navParams, iab) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.searchQuery = '';
-        var loadingPopup = this.loadingCtrl.create({
-            content: 'Loading coins...'
-        });
+        this.iab = iab;
     }
-    CoinsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CoinsPage');
-        this.loadCoin();
+    BuriedoneShopPage.prototype.openWebpage = function (url) {
+        var options = {
+            zoom: 'no'
+        };
+        var browser = this.iab.create(url, '_self', options);
     };
-    CoinsPage.prototype.loadCoin = function () {
-        var _this = this;
-        this.http.get('https://api.coinmarketcap.com/v2/ticker/?start=101&limit=1000&sort=id&structure=array')
-            .map(function (res) { return res.json(); })
-            .subscribe(function (res) {
-            _this.coinData = res.data;
-            _this.initializeItems();
-            //console.log(res.data);
-        }, function (err) {
-            console.log(err);
-        });
-    };
-    CoinsPage.prototype.initializeItems = function () {
-        this.items = this.coinData;
-    };
-    CoinsPage.prototype.getItems = function (ev) {
-        // Reset items back to all of the items
-        this.initializeItems();
-        // set val to the value of the searchbar
-        var val = ev.target.value;
-        // if the value is an empty string don't filter the items
-        if (val && val.trim() != '') {
-            this.coinData = this.items.filter(function (item) {
-                return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
-            });
-        }
-    };
-    return CoinsPage;
+    return BuriedoneShopPage;
 }());
-CoinsPage = __decorate([
+BuriedoneShopPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-coins',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/coins/coins.html"*/'<!--\n  Generated template for the CoinsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>coins</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form id="filter"></form>\n    <ion-searchbar (ionInput)="getItems($event)" [debounce]="500" placeholder="Search coins by name"></ion-searchbar>\n  <br>\n    <ion-row>\n        <ion-col>\n          <div >\n            \n            <ion-card *ngFor="let item of coinData">\n            <ion-item>\n              <h2>{{item.name}}</h2>\n              <p>Rank: {{item.rank}}</p>\n              <br>\n              <p>Price: ${{item.quotes.USD.price }}</p>\n              <p>Total Supply: {{item.total_supply}}</p>\n            </ion-item>\n            <ion-row>\n              <ion-col>\n              </ion-col>\n            </ion-row>\n          </ion-card>\n          </div>\n        </ion-col>\n      </ion-row>\n\n</ion-content>\n\n                \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n              \n         '/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/coins/coins.html"*/,
+        selector: 'page-buriedone-shop',template:/*ion-inline-start:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/buriedone-shop/buriedone-shop.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n    <ion-title></ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="container">\n  <img src="assets/img/training_courses1.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=2\')">\n  <img src="assets/img/training_courses2.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=3\')">\n  <img src="assets/img/training_courses3.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=5\')">\n  <img src="assets/img/training_courses4.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=1\')">\n  <img src="assets/img/training_courses5.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=4\')">\n  <img src="assets/img/training_courses6.jpg" alt="" (click)="openWebpage(\'https://app.carlvandevelde.be/mijn-academie/master-in-business?popup=6\')">\n</ion-content>\n'/*ion-inline-end:"/Users/nikolainossulenko/Desktop/CloudApi/KaizenApp/src/pages/buriedone-shop/buriedone-shop.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _d || Object])
-], CoinsPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__["a" /* InAppBrowser */]])
+], BuriedoneShopPage);
 
-var _a, _b, _c, _d;
-//# sourceMappingURL=coins.js.map
+//# sourceMappingURL=buriedone-shop.js.map
 
 /***/ })
 

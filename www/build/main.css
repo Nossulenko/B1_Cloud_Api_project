@@ -25799,6 +25799,10 @@ ion-footer button {
   margin-top: 10px;
 }
 
+page-buriedone-shop img {
+  width: 100%;
+}
+
 page-explore ion-slides {
   margin-top: 5px;
   height: 260px;
@@ -26061,10 +26065,6 @@ page-show-quotes *, page-show-quotes *:before, page-show-quotes *:after {
 
 ion-item {
   background-color: transparent;
-}
-
-page-training-courses img {
-  width: 100%;
 }
 
 page-welcome div .buttons {

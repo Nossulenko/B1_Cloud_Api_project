@@ -6,7 +6,7 @@ webpackJsonp([18],{
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_auth__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_auth__ = __webpack_require__(87);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -116,7 +116,7 @@ AuthService = __decorate([
 
 /***/ }),
 
-/***/ 161:
+/***/ 162:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -129,84 +129,84 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 161;
+webpackEmptyAsyncContext.id = 162;
 
 /***/ }),
 
-/***/ 204:
+/***/ 205:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/add-note/add-note.module": [
-		485,
+		486,
 		17
 	],
 	"../pages/agenda/agenda.module": [
-		486,
+		487,
 		16
 	],
-	"../pages/coins/coins.module": [
-		487,
+	"../pages/buriedone-shop/buriedone-shop.module": [
+		488,
 		15
 	],
-	"../pages/edit-note/edit-note.module": [
-		488,
+	"../pages/coins/coins.module": [
+		489,
 		14
 	],
-	"../pages/explore/explore.module": [
-		489,
+	"../pages/edit-note/edit-note.module": [
+		491,
 		13
 	],
-	"../pages/forgot-password/forgot-password.module": [
+	"../pages/explore/explore.module": [
 		490,
 		12
 	],
-	"../pages/home/home.module": [
-		491,
+	"../pages/forgot-password/forgot-password.module": [
+		492,
 		11
 	],
-	"../pages/home2/home2.module": [
-		492,
+	"../pages/home/home.module": [
+		493,
 		10
 	],
-	"../pages/immersion/immersion.module": [
-		493,
+	"../pages/home2/home2.module": [
+		494,
 		9
 	],
+	"../pages/immersion/immersion.module": [
+		495,
+		8
+	],
 	"../pages/login/login.module": [
-		494,
+		497,
 		3
 	],
 	"../pages/profile-view/profile-view.module": [
-		495,
+		496,
 		2
 	],
 	"../pages/profile/profile.module": [
-		496,
+		498,
 		1
 	],
 	"../pages/quote/quote.module": [
-		497,
-		8
-	],
-	"../pages/register/register.module": [
-		498,
-		0
-	],
-	"../pages/show-quotes/show-quotes.module": [
 		499,
 		7
 	],
-	"../pages/tabs/tabs.module": [
+	"../pages/register/register.module": [
 		500,
+		0
+	],
+	"../pages/show-quotes/show-quotes.module": [
+		501,
 		6
 	],
-	"../pages/training-courses/training-courses.module": [
-		501,
+	"../pages/tabs/tabs.module": [
+		502,
 		5
 	],
 	"../pages/welcome/welcome.module": [
-		502,
+		503,
 		4
 	]
 };
@@ -221,18 +221,18 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 204;
+webpackAsyncContext.id = 205;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 301:
+/***/ 302:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(88);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -320,8 +320,8 @@ DataService = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotesService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase__ = __webpack_require__(304);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -385,7 +385,7 @@ NotesService = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToastService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -439,13 +439,13 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(151);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(480);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(481);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(482);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire2__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_firebase_config__ = __webpack_require__(483);
@@ -453,17 +453,19 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_in_app_browser__ = __webpack_require__(306);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_forms__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_auth_service__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_data_service__ = __webpack_require__(301);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_angularfire2_database__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_data_service__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_angularfire2_database__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_social_sharing__ = __webpack_require__(307);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_notes_service__ = __webpack_require__(303);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_toast_service__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_rest_service_rest_service__ = __webpack_require__(485);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -499,21 +501,21 @@ AppModule = __decorate([
                 links: [
                     { loadChildren: '../pages/add-note/add-note.module#AddNotePageModule', name: 'AddNotePage', segment: 'add-note', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/agenda/agenda.module#AgendaPageModule', name: 'AgendaPage', segment: 'agenda', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/buriedone-shop/buriedone-shop.module#BuriedoneShopPageModule', name: 'BuriedoneShopPage', segment: 'buriedone-shop', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/coins/coins.module#CoinsPageModule', name: 'CoinsPage', segment: 'coins', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/edit-note/edit-note.module#EditNotePageModule', name: 'EditNotePage', segment: 'edit-note', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/explore/explore.module#ExplorePageModule', name: 'ExplorePage', segment: 'explore', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/edit-note/edit-note.module#EditNotePageModule', name: 'EditNotePage', segment: 'edit-note', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/forgot-password/forgot-password.module#ForgotPasswordPageModule', name: 'ForgotPasswordPage', segment: 'forgot-password', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/home2/home2.module#Home2PageModule', name: 'Home2Page', segment: 'home2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/immersion/immersion.module#ImmersionPageModule', name: 'ImmersionPage', segment: 'immersion', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/profile-view/profile-view.module#ProfileViewPageModule', name: 'ProfileViewPage', segment: 'profile-view', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/quote/quote.module#QuotePageModule', name: 'QuotePage', segment: 'quote', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/show-quotes/show-quotes.module#ShowQuotesPageModule', name: 'ShowQuotesPage', segment: 'show-quotes', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/training-courses/training-courses.module#TrainingCoursesPageModule', name: 'TrainingCoursesPage', segment: 'training-courses', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                 ]
             }),
@@ -539,6 +541,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_17__providers_notes_service__["a" /* NotesService */],
             __WEBPACK_IMPORTED_MODULE_18__providers_toast_service__["a" /* ToastService */],
             __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_19__providers_rest_service_rest_service__["a" /* RestServiceProvider */],
         ]
     })
 ], AppModule);
@@ -553,7 +556,7 @@ AppModule = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_service__ = __webpack_require__(150);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -603,6 +606,60 @@ var FIREBASE_CONFIG = {
     messagingSenderId: "191670524837"
 };
 //# sourceMappingURL=app.firebase.config.js.map
+
+/***/ }),
+
+/***/ 485:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RestServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/*
+  Generated class for the RestServiceProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var RestServiceProvider = (function () {
+    function RestServiceProvider(http) {
+        this.http = http;
+        console.log('Hello RestServiceProvider Provider');
+    }
+    RestServiceProvider.prototype.loadCoin = function () {
+        var _this = this;
+        this.http.get('https://api.coinmarketcap.com/v2/listings/')
+            .map(function (res) { return res.json(); })
+            .subscribe(function (res) {
+            _this.coinData = res.data;
+            //console.log(res.data);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    return RestServiceProvider;
+}());
+RestServiceProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
+], RestServiceProvider);
+
+//# sourceMappingURL=rest-service.js.map
 
 /***/ })
 

@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { TrainingCoursesPage } from './training-courses';
+import { BuriedoneShopPage } from './buriedone-shop';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @NgModule({
   declarations: [
-    TrainingCoursesPage,
+    BuriedoneShopPage,
   ],
   providers: [
     InAppBrowser,
   ],
   imports: [
-    IonicPageModule.forChild(TrainingCoursesPage),
+    IonicPageModule.forChild(BuriedoneShopPage),
+    InAppBrowser
   ],
 })
-export class TrainingCoursesPageModule {}
+export class BuriedoneShopPageModule {}
